@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace StockControl.Helper
 {
-    class EmailHelper
+    static class EmailHelper
     {
+
     }
 }
