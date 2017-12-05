@@ -79,8 +79,22 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Icons\" />
+    <Content Include="Icons\categoria.png" />
+    <Content Include="Icons\deletar.png" />
+    <Content Include="Icons\editar2.png" />
+    <Content Include="Icons\estoque2.png" />
+    <Content Include="Icons\Imagem.jpg" />
+    <Content Include="Icons\log3.png" />
+    <Content Include="Icons\LogIn.png" />
+    <Content Include="Icons\lupa.png" />
+    <Content Include="Icons\mais 1.png" />
+    <Content Include="Icons\produt.jpg.ico" />
+    <Content Include="Icons\salvar.png" />
+    <Content Include="Icons\usuario1.ico" />
+    <Content Include="Icons\voltar.png" />
+    <Content Include="Icons\x.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
