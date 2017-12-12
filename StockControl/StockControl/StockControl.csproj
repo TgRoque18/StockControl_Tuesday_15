@@ -46,12 +46,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class\Email.cs" />
     <Compile Include="Class\Category.cs" />
-    <Compile Include="Class\Log.cs" />
     <Compile Include="Class\Product.cs" />
     <Compile Include="Class\Log.cs" />
-    <Compile Include="Class\Product.cs" />
     <Compile Include="Class\Email.cs" />
     <Compile Include="DAO\CategoryDAO.cs" />
     <Compile Include="Forms\CategoryAllForm.cs">
@@ -122,15 +119,13 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\CategoryDetailsForm.resx">
       <DependentUpon>CategoryDetailsForm.cs</DependentUpon>
+    </EmbeddedResource>
     <Compile Include="Forms\UserProfileDetailsForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\UserProfileDetailsForm.Designer.cs">
       <DependentUpon>UserProfileDetailsForm.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Forms\Category.resx">
-      <DependentUpon>Category.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
