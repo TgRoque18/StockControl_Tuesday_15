@@ -10,11 +10,13 @@ using System.Windows.Forms;
 
 namespace StockControl.Forms
 {
-    public partial class Home : Form
+    public partial class HomeDetailsForm : Form
     {
-        public Home()
+        public HomeDetailsForm()
         {
             InitializeComponent();
         }
+
+       
     }
 }

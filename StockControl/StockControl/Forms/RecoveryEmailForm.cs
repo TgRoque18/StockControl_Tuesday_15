@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace StockControl.Forms
 {
-    public partial class Login : Form
+    public partial class RecoveryEmailForm : Form
     {
-        public Login()
+        public RecoveryEmailForm()
         {
             InitializeComponent();
         }

@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class\Category.cs" />
+    <Compile Include="Class\User.cs" />
     <Compile Include="DAO\CategoryDAO.cs" />
     <Compile Include="Forms\Category.cs">
       <SubType>Form</SubType>
@@ -54,17 +55,23 @@
     <Compile Include="Forms\Category.Designer.cs">
       <DependentUpon>Category.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Home.cs">
+    <Compile Include="Forms\HomeDetailsForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Home.Designer.cs">
-      <DependentUpon>Home.cs</DependentUpon>
+    <Compile Include="Forms\HomeDetailsForm.Designer.cs">
+      <DependentUpon>HomeDetailsForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Login.cs">
+    <Compile Include="Forms\RecoveryEmailForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Login.Designer.cs">
-      <DependentUpon>Login.cs</DependentUpon>
+    <Compile Include="Forms\RecoveryEmailForm.Designer.cs">
+      <DependentUpon>RecoveryEmailForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\LoginDetailsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\LoginDetailsForm.Designer.cs">
+      <DependentUpon>LoginDetailsForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\MainForm.cs">
       <SubType>Form</SubType>
@@ -84,11 +91,14 @@
     <EmbeddedResource Include="Forms\Category.resx">
       <DependentUpon>Category.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Home.resx">
-      <DependentUpon>Home.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\HomeDetailsForm.resx">
+      <DependentUpon>HomeDetailsForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Login.resx">
-      <DependentUpon>Login.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\RecoveryEmailForm.resx">
+      <DependentUpon>RecoveryEmailForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\LoginDetailsForm.resx">
+      <DependentUpon>LoginDetailsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Stock.resx">
       <DependentUpon>Stock.cs</DependentUpon>
@@ -119,6 +129,7 @@
   <ItemGroup />
   <ItemGroup>
     <Content Include="Icons\categoria.png" />
+    <None Include="Icons\confirm.png" />
     <Content Include="Icons\deletar.png" />
     <Content Include="Icons\editar2.png" />
     <Content Include="Icons\estoque2.png" />
@@ -131,6 +142,7 @@
     <Content Include="Icons\produt.jpg.ico" />
     <None Include="Icons\recovey.png" />
     <Content Include="Icons\salvar.png" />
+    <None Include="Icons\user profile.png" />
     <Content Include="Icons\usuario1.ico" />
     <Content Include="Icons\voltar.png" />
     <Content Include="Icons\x.png" />
