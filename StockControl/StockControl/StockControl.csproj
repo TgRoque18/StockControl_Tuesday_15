@@ -111,6 +111,7 @@
     <Content Include="Icons\lupa.png" />
     <Content Include="Icons\mais 1.png" />
     <Content Include="Icons\produt.jpg.ico" />
+    <None Include="Icons\recovey.png" />
     <Content Include="Icons\salvar.png" />
     <Content Include="Icons\usuario1.ico" />
     <Content Include="Icons\voltar.png" />

@@ -28,61 +28,63 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.tbxUser = new System.Windows.Forms.TextBox();
+            this.tbxPassword = new System.Windows.Forms.TextBox();
+            this.lblUser = new System.Windows.Forms.Label();
+            this.lblPassword = new System.Windows.Forms.Label();
+            this.pbxLogIn = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.pbxRecovery = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxLogIn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxRecovery)).BeginInit();
             this.SuspendLayout();
             // 
-            // textBox1
+            // tbxUser
             // 
-            this.textBox1.Location = new System.Drawing.Point(95, 136);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 1;
+            this.tbxUser.Location = new System.Drawing.Point(95, 136);
+            this.tbxUser.Name = "tbxUser";
+            this.tbxUser.Size = new System.Drawing.Size(100, 20);
+            this.tbxUser.TabIndex = 1;
             // 
-            // textBox2
+            // tbxPassword
             // 
-            this.textBox2.Location = new System.Drawing.Point(95, 180);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 2;
+            this.tbxPassword.Location = new System.Drawing.Point(95, 180);
+            this.tbxPassword.Name = "tbxPassword";
+            this.tbxPassword.Size = new System.Drawing.Size(100, 20);
+            this.tbxPassword.TabIndex = 2;
             // 
-            // label1
+            // lblUser
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(127, 120);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "label1";
+            this.lblUser.AutoSize = true;
+            this.lblUser.Location = new System.Drawing.Point(116, 120);
+            this.lblUser.Name = "lblUser";
+            this.lblUser.Size = new System.Drawing.Size(46, 13);
+            this.lblUser.TabIndex = 3;
+            this.lblUser.Text = "Usuário:";
             // 
-            // label2
+            // lblPassword
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(127, 164);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "label2";
+            this.lblPassword.AutoSize = true;
+            this.lblPassword.Location = new System.Drawing.Point(121, 164);
+            this.lblPassword.Name = "lblPassword";
+            this.lblPassword.Size = new System.Drawing.Size(41, 13);
+            this.lblPassword.TabIndex = 4;
+            this.lblPassword.Text = "Senha:";
             // 
-            // pictureBox2
+            // pbxLogIn
             // 
-            this.pictureBox2.Location = new System.Drawing.Point(95, 220);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(29, 30);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 5;
-            this.pictureBox2.TabStop = false;
+            this.pbxLogIn.Image = global::StockControl.Properties.Resources.LogIn;
+            this.pbxLogIn.Location = new System.Drawing.Point(95, 220);
+            this.pbxLogIn.Name = "pbxLogIn";
+            this.pbxLogIn.Size = new System.Drawing.Size(29, 30);
+            this.pbxLogIn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbxLogIn.TabIndex = 5;
+            this.pbxLogIn.TabStop = false;
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Image = global::StockControl.Properties.Resources.Imagem;
             this.pictureBox1.Location = new System.Drawing.Point(53, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(175, 93);
@@ -90,32 +92,33 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // pictureBox3
+            // pbxRecovery
             // 
-            this.pictureBox3.Location = new System.Drawing.Point(166, 220);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(29, 30);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 6;
-            this.pictureBox3.TabStop = false;
+            this.pbxRecovery.Image = global::StockControl.Properties.Resources.recovey;
+            this.pbxRecovery.Location = new System.Drawing.Point(166, 220);
+            this.pbxRecovery.Name = "pbxRecovery";
+            this.pbxRecovery.Size = new System.Drawing.Size(29, 30);
+            this.pbxRecovery.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbxRecovery.TabIndex = 6;
+            this.pbxRecovery.TabStop = false;
             // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 262);
-            this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.pbxRecovery);
+            this.Controls.Add(this.pbxLogIn);
+            this.Controls.Add(this.lblPassword);
+            this.Controls.Add(this.lblUser);
+            this.Controls.Add(this.tbxPassword);
+            this.Controls.Add(this.tbxUser);
             this.Controls.Add(this.pictureBox1);
             this.Name = "Login";
             this.Text = "Login";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxLogIn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxRecovery)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -124,11 +127,11 @@
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.TextBox tbxUser;
+        private System.Windows.Forms.TextBox tbxPassword;
+        private System.Windows.Forms.Label lblUser;
+        private System.Windows.Forms.Label lblPassword;
+        private System.Windows.Forms.PictureBox pbxLogIn;
+        private System.Windows.Forms.PictureBox pbxRecovery;
     }
 }
