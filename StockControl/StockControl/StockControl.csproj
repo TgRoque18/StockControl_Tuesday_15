@@ -47,12 +47,20 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class\Category.cs" />
+    <Compile Include="Class\Log.cs" />
+    <Compile Include="Class\Product.cs" />
     <Compile Include="DAO\CategoryDAO.cs" />
-    <Compile Include="Forms\Category.cs">
+    <Compile Include="Forms\CategoryAllForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Category.Designer.cs">
-      <DependentUpon>Category.cs</DependentUpon>
+    <Compile Include="Forms\CategoryAllForm.Designer.cs">
+      <DependentUpon>CategoryAllForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CategoryDetailsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CategoryDetailsForm.Designer.cs">
+      <DependentUpon>CategoryDetailsForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Home.cs">
       <SubType>Form</SubType>
@@ -72,17 +80,26 @@
     <Compile Include="Forms\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Stock.cs">
+    <Compile Include="Forms\StockDetailsForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Stock.Designer.cs">
-      <DependentUpon>Stock.cs</DependentUpon>
+    <Compile Include="Forms\StockDetailsForm.Designer.cs">
+      <DependentUpon>StockDetailsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\StockAllForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\StockAllForm.Designer.cs">
+      <DependentUpon>StockAllForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Helper\EmailHelper.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Forms\Category.resx">
-      <DependentUpon>Category.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\CategoryAllForm.resx">
+      <DependentUpon>CategoryAllForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CategoryDetailsForm.resx">
+      <DependentUpon>CategoryDetailsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
@@ -90,8 +107,11 @@
     <EmbeddedResource Include="Forms\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Stock.resx">
-      <DependentUpon>Stock.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\StockAllForm.resx">
+      <DependentUpon>StockAllForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\StockDetailsForm.resx">
+      <DependentUpon>StockDetailsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
