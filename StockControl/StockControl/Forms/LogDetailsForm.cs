@@ -10,11 +10,21 @@ using System.Windows.Forms;
 
 namespace StockControl.Forms
 {
-    public partial class Stock : Form
+    public partial class LogDetailsForm : Form
     {
-        public Stock()
+        public LogDetailsForm()
         {
             InitializeComponent();
+        }
+
+        private void pbxSearch_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pbxBack_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

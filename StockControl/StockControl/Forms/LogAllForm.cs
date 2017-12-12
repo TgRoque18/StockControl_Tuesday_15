@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace StockControl.Forms
 {
-    public partial class Category : Form
+    public partial class LogAllForm : Form
     {
-        public Category()
+        public LogAllForm()
         {
             InitializeComponent();
+        }
+
+        private void pbxBack_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
