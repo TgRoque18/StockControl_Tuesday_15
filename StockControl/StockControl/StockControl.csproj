@@ -63,29 +63,23 @@
     <Compile Include="Forms\CategoryDetailsForm.Designer.cs">
       <DependentUpon>CategoryDetailsForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Home.cs">
+    <Compile Include="Forms\HomeDetailsForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Home.Designer.cs">
-      <DependentUpon>Home.cs</DependentUpon>
+    <Compile Include="Forms\HomeDetailsForm.Designer.cs">
+      <DependentUpon>HomeDetailsForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\LogAllForm.cs">
+    <Compile Include="Forms\RecoveryEmailForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\LogAllForm.Designer.cs">
-      <DependentUpon>LogAllForm.cs</DependentUpon>
+    <Compile Include="Forms\RecoveryEmailForm.Designer.cs">
+      <DependentUpon>RecoveryEmailForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\LogDetailsForm.cs">
+    <Compile Include="Forms\LoginDetailsForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\LogDetailsForm.Designer.cs">
-      <DependentUpon>LogDetailsForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\Login.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Login.Designer.cs">
-      <DependentUpon>Login.cs</DependentUpon>
+    <Compile Include="Forms\LoginDetailsForm.Designer.cs">
+      <DependentUpon>LoginDetailsForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\MainForm.cs">
       <SubType>Form</SubType>
@@ -126,17 +120,20 @@
     <Compile Include="Forms\UserProfileDetailsForm.Designer.cs">
       <DependentUpon>UserProfileDetailsForm.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Forms\Home.resx">
+    <EmbeddedResource Include="Forms\Category.resx">
+      <DependentUpon>Category.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\HomeDetailsForm.resx">
+      <DependentUpon>HomeDetailsForm.cs</DependentUpon>
+    </EmbeddedResource>
+	<EmbeddedResource Include="Forms\Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\LogAllForm.resx">
-      <DependentUpon>LogAllForm.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\RecoveryEmailForm.resx">
+      <DependentUpon>RecoveryEmailForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\LogDetailsForm.resx">
-      <DependentUpon>LogDetailsForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Login.resx">
-      <DependentUpon>Login.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\LoginDetailsForm.resx">
+      <DependentUpon>LoginDetailsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\StockAllForm.resx">
       <DependentUpon>StockAllForm.cs</DependentUpon>
@@ -176,6 +173,7 @@
   <ItemGroup />
   <ItemGroup>
     <Content Include="Icons\categoria.png" />
+    <None Include="Icons\confirm.png" />
     <Content Include="Icons\deletar.png" />
     <Content Include="Icons\editar2.png" />
     <Content Include="Icons\estoque2.png" />
@@ -188,6 +186,7 @@
     <Content Include="Icons\produt.jpg.ico" />
     <None Include="Icons\recovey.png" />
     <Content Include="Icons\salvar.png" />
+    <None Include="Icons\user profile.png" />
     <Content Include="Icons\usuario1.ico" />
     <Content Include="Icons\voltar.png" />
     <Content Include="Icons\x.png" />

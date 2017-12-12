@@ -1,6 +1,6 @@
 ﻿namespace StockControl.Forms
 {
-    partial class Login
+    partial class LoginDetailsForm
     {
         /// <summary>
         /// Required designer variable.

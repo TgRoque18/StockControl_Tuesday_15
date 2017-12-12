@@ -6,11 +6,14 @@ using System.Threading.Tasks;
 
 namespace StockControl.Class
 {
-    public class Category
+    public class User
     {
         int id = 0;
         char name;
+        char password;
+        char email;
         bool active;
+        //UserProfile userProfile;
 
         public int Id
         {
@@ -38,6 +41,32 @@ namespace StockControl.Class
             }
         }
 
+        public char Password
+        {
+            get
+            {
+                return password;
+            }
+
+            set
+            {
+                password = value;
+            }
+        }
+
+        public char Email
+        {
+            get
+            {
+                return email;
+            }
+
+            set
+            {
+                email = value;
+            }
+        }
+
         public bool Active
         {
             get
@@ -50,6 +79,7 @@ namespace StockControl.Class
                 active = value;
             }
         }
+       
 
 
     }
