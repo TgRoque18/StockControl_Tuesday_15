@@ -17,6 +17,11 @@ namespace StockControl.Forms
             InitializeComponent();
         }
 
+        private void pbxSearch_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void pbxBack_Click(object sender, EventArgs e)
         {
 

@@ -19,15 +19,40 @@ namespace StockControl.Forms
 
         private void pbxBack_Click(object sender, EventArgs e)
         {
-
+            //erro
         }
 
         private void pbxSave_Click(object sender, EventArgs e)
         {
-
+            //erro
         }
 
         private void pbxDelete_Click(object sender, EventArgs e)
+        {
+            //erro
+        }
+
+        private void pbxBack_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pbxAdd_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pbxEdit_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pbxSave_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pbxSearch_Click(object sender, EventArgs e)
         {
 
         }

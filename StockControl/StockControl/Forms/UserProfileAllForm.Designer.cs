@@ -28,92 +28,124 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.tbxName = new System.Windows.Forms.TextBox();
-            this.lblName = new System.Windows.Forms.Label();
-            this.lblUserProfile = new System.Windows.Forms.Label();
-            this.pbxDelete = new System.Windows.Forms.PictureBox();
-            this.pbxSave = new System.Windows.Forms.PictureBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.lblSearch = new System.Windows.Forms.Label();
+            this.tbxSearch = new System.Windows.Forms.TextBox();
+            this.pbxSearch = new System.Windows.Forms.PictureBox();
             this.pbxBack = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxDelete)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxSave)).BeginInit();
+            this.pbxAdd = new System.Windows.Forms.PictureBox();
+            this.pbxEdit = new System.Windows.Forms.PictureBox();
+            this.pbxSave = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxSearch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxBack)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxAdd)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxEdit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxSave)).BeginInit();
             this.SuspendLayout();
             // 
-            // tbxName
+            // dataGridView1
             // 
-            this.tbxName.Location = new System.Drawing.Point(65, 53);
-            this.tbxName.Name = "tbxName";
-            this.tbxName.Size = new System.Drawing.Size(100, 20);
-            this.tbxName.TabIndex = 21;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(12, 31);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(310, 199);
+            this.dataGridView1.TabIndex = 0;
             // 
-            // lblName
+            // lblSearch
             // 
-            this.lblName.AutoSize = true;
-            this.lblName.Location = new System.Drawing.Point(18, 56);
-            this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(41, 13);
-            this.lblName.TabIndex = 20;
-            this.lblName.Text = "Nome: ";
+            this.lblSearch.AutoSize = true;
+            this.lblSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSearch.Location = new System.Drawing.Point(8, 8);
+            this.lblSearch.Name = "lblSearch";
+            this.lblSearch.Size = new System.Drawing.Size(83, 20);
+            this.lblSearch.TabIndex = 1;
+            this.lblSearch.Text = "Pesquisar:";
             // 
-            // lblUserProfile
+            // tbxSearch
             // 
-            this.lblUserProfile.AutoSize = true;
-            this.lblUserProfile.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUserProfile.Location = new System.Drawing.Point(23, 7);
-            this.lblUserProfile.Name = "lblUserProfile";
-            this.lblUserProfile.Size = new System.Drawing.Size(142, 24);
-            this.lblUserProfile.TabIndex = 19;
-            this.lblUserProfile.Text = "Tipo de usuário";
+            this.tbxSearch.Location = new System.Drawing.Point(97, 8);
+            this.tbxSearch.Name = "tbxSearch";
+            this.tbxSearch.Size = new System.Drawing.Size(100, 20);
+            this.tbxSearch.TabIndex = 2;
             // 
-            // pbxDelete
+            // pbxSearch
             // 
-            this.pbxDelete.Image = global::StockControl.Properties.Resources.deletar;
-            this.pbxDelete.Location = new System.Drawing.Point(154, 98);
-            this.pbxDelete.Name = "pbxDelete";
-            this.pbxDelete.Size = new System.Drawing.Size(33, 32);
-            this.pbxDelete.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbxDelete.TabIndex = 24;
-            this.pbxDelete.TabStop = false;
-            this.pbxDelete.Click += new System.EventHandler(this.pbxDelete_Click);
-            // 
-            // pbxSave
-            // 
-            this.pbxSave.Image = global::StockControl.Properties.Resources.salvar;
-            this.pbxSave.Location = new System.Drawing.Point(105, 98);
-            this.pbxSave.Name = "pbxSave";
-            this.pbxSave.Size = new System.Drawing.Size(33, 32);
-            this.pbxSave.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbxSave.TabIndex = 23;
-            this.pbxSave.TabStop = false;
-            this.pbxSave.Click += new System.EventHandler(this.pbxSave_Click);
+            this.pbxSearch.Image = global::StockControl.Properties.Resources.lupa;
+            this.pbxSearch.Location = new System.Drawing.Point(203, 8);
+            this.pbxSearch.Name = "pbxSearch";
+            this.pbxSearch.Size = new System.Drawing.Size(20, 20);
+            this.pbxSearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbxSearch.TabIndex = 3;
+            this.pbxSearch.TabStop = false;
+            this.pbxSearch.Click += new System.EventHandler(this.pbxSearch_Click);
             // 
             // pbxBack
             // 
             this.pbxBack.Image = global::StockControl.Properties.Resources.voltar;
-            this.pbxBack.Location = new System.Drawing.Point(6, 98);
+            this.pbxBack.Location = new System.Drawing.Point(12, 236);
             this.pbxBack.Name = "pbxBack";
-            this.pbxBack.Size = new System.Drawing.Size(33, 32);
+            this.pbxBack.Size = new System.Drawing.Size(33, 33);
             this.pbxBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbxBack.TabIndex = 22;
+            this.pbxBack.TabIndex = 4;
             this.pbxBack.TabStop = false;
-            this.pbxBack.Click += new System.EventHandler(this.pbxBack_Click);
+            this.pbxBack.Click += new System.EventHandler(this.pbxBack_Click_1);
+            // 
+            // pbxAdd
+            // 
+            this.pbxAdd.Image = global::StockControl.Properties.Resources.mais_1;
+            this.pbxAdd.Location = new System.Drawing.Point(211, 236);
+            this.pbxAdd.Name = "pbxAdd";
+            this.pbxAdd.Size = new System.Drawing.Size(33, 33);
+            this.pbxAdd.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbxAdd.TabIndex = 5;
+            this.pbxAdd.TabStop = false;
+            this.pbxAdd.Click += new System.EventHandler(this.pbxAdd_Click);
+            // 
+            // pbxEdit
+            // 
+            this.pbxEdit.Image = global::StockControl.Properties.Resources.editar2;
+            this.pbxEdit.Location = new System.Drawing.Point(250, 236);
+            this.pbxEdit.Name = "pbxEdit";
+            this.pbxEdit.Size = new System.Drawing.Size(33, 33);
+            this.pbxEdit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbxEdit.TabIndex = 6;
+            this.pbxEdit.TabStop = false;
+            this.pbxEdit.Click += new System.EventHandler(this.pbxEdit_Click);
+            // 
+            // pbxSave
+            // 
+            this.pbxSave.Image = global::StockControl.Properties.Resources.salvar;
+            this.pbxSave.Location = new System.Drawing.Point(289, 236);
+            this.pbxSave.Name = "pbxSave";
+            this.pbxSave.Size = new System.Drawing.Size(33, 33);
+            this.pbxSave.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbxSave.TabIndex = 7;
+            this.pbxSave.TabStop = false;
+            this.pbxSave.Click += new System.EventHandler(this.pbxSave_Click_1);
             // 
             // UserProfileAllForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(192, 137);
-            this.Controls.Add(this.pbxDelete);
+            this.ClientSize = new System.Drawing.Size(334, 281);
             this.Controls.Add(this.pbxSave);
+            this.Controls.Add(this.pbxEdit);
+            this.Controls.Add(this.pbxAdd);
             this.Controls.Add(this.pbxBack);
-            this.Controls.Add(this.tbxName);
-            this.Controls.Add(this.lblName);
-            this.Controls.Add(this.lblUserProfile);
+            this.Controls.Add(this.pbxSearch);
+            this.Controls.Add(this.tbxSearch);
+            this.Controls.Add(this.lblSearch);
+            this.Controls.Add(this.dataGridView1);
             this.Name = "UserProfileAllForm";
-            this.Text = "UserProfileAllForm";
-            ((System.ComponentModel.ISupportInitialize)(this.pbxDelete)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxSave)).EndInit();
+            this.Text = "Tipo de Usuário";
+            this.UseWaitCursor = true;
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxSearch)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxBack)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxAdd)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxEdit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxSave)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -121,11 +153,13 @@
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pbxDelete;
-        private System.Windows.Forms.PictureBox pbxSave;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Label lblSearch;
+        private System.Windows.Forms.TextBox tbxSearch;
+        private System.Windows.Forms.PictureBox pbxSearch;
         private System.Windows.Forms.PictureBox pbxBack;
-        private System.Windows.Forms.TextBox tbxName;
-        private System.Windows.Forms.Label lblName;
-        private System.Windows.Forms.Label lblUserProfile;
+        private System.Windows.Forms.PictureBox pbxAdd;
+        private System.Windows.Forms.PictureBox pbxEdit;
+        private System.Windows.Forms.PictureBox pbxSave;
     }
 }

@@ -19,7 +19,7 @@ namespace StockControl
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-
+            //erro
         }
 
         private void pbxBack_Click(object sender, EventArgs e)
