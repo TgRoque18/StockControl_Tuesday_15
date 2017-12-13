@@ -50,6 +50,7 @@
     <Compile Include="Class\Product.cs" />
     <Compile Include="Class\Log.cs" />
     <Compile Include="Class\Email.cs" />
+    <Compile Include="Class\UserProfile.cs" />
     <Compile Include="DAO\CategoryDAO.cs" />
     <Compile Include="Forms\CategoryAllForm.cs">
       <SubType>Form</SubType>
@@ -126,14 +127,8 @@
     <Compile Include="Forms\UserProfileDetailsForm.Designer.cs">
       <DependentUpon>UserProfileDetailsForm.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Forms\Category.resx">
-      <DependentUpon>Category.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Forms\HomeDetailsForm.resx">
       <DependentUpon>HomeDetailsForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Home.resx">
-      <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\LogAllForm.resx">
       <DependentUpon>LogAllForm.cs</DependentUpon>
