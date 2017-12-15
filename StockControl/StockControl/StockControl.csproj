@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class\Category.cs" />
+    <Compile Include="Class\Log_Type.cs" />
     <Compile Include="Class\Product.cs" />
     <Compile Include="Class\Log.cs" />
     <Compile Include="Class\Email.cs" />
