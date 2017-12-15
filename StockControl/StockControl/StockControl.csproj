@@ -51,6 +51,7 @@
     <Compile Include="Class\Product.cs" />
     <Compile Include="Class\Log.cs" />
     <Compile Include="Class\Email.cs" />
+    <Compile Include="Class\Stock.cs" />
     <Compile Include="Class\UserProfile.cs" />
     <Compile Include="DAO\CategoryDAO.cs" />
     <Compile Include="Forms\CategoryAllForm.cs">
