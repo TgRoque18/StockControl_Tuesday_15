@@ -58,54 +58,60 @@
             // lblName
             // 
             this.lblName.AutoSize = true;
+            this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblName.Location = new System.Drawing.Point(33, 55);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(38, 13);
+            this.lblName.Size = new System.Drawing.Size(48, 16);
             this.lblName.TabIndex = 0;
             this.lblName.Text = "Nome:";
             // 
             // lblEmail
             // 
             this.lblEmail.AutoSize = true;
+            this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEmail.Location = new System.Drawing.Point(33, 83);
             this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(38, 13);
+            this.lblEmail.Size = new System.Drawing.Size(49, 16);
             this.lblEmail.TabIndex = 1;
             this.lblEmail.Text = "E-mail:";
             // 
             // lblPassword
             // 
             this.lblPassword.AutoSize = true;
+            this.lblPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPassword.Location = new System.Drawing.Point(30, 113);
             this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(41, 13);
+            this.lblPassword.Size = new System.Drawing.Size(50, 16);
             this.lblPassword.TabIndex = 2;
             this.lblPassword.Text = "Senha:";
             // 
             // lblConfirmPassword
             // 
             this.lblConfirmPassword.AutoSize = true;
-            this.lblConfirmPassword.Location = new System.Drawing.Point(4, 144);
+            this.lblConfirmPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblConfirmPassword.Location = new System.Drawing.Point(-5, 142);
             this.lblConfirmPassword.Name = "lblConfirmPassword";
-            this.lblConfirmPassword.Size = new System.Drawing.Size(67, 13);
+            this.lblConfirmPassword.Size = new System.Drawing.Size(81, 16);
             this.lblConfirmPassword.TabIndex = 3;
             this.lblConfirmPassword.Text = "Conf. senha:";
             // 
             // lblProfile
             // 
             this.lblProfile.AutoSize = true;
+            this.lblProfile.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblProfile.Location = new System.Drawing.Point(37, 170);
             this.lblProfile.Name = "lblProfile";
-            this.lblProfile.Size = new System.Drawing.Size(33, 13);
+            this.lblProfile.Size = new System.Drawing.Size(41, 16);
             this.lblProfile.TabIndex = 4;
             this.lblProfile.Text = "Perfil:";
             // 
             // lblActive
             // 
             this.lblActive.AutoSize = true;
+            this.lblActive.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblActive.Location = new System.Drawing.Point(36, 203);
             this.lblActive.Name = "lblActive";
-            this.lblActive.Size = new System.Drawing.Size(34, 13);
+            this.lblActive.Size = new System.Drawing.Size(41, 16);
             this.lblActive.TabIndex = 5;
             this.lblActive.Text = "Ativo:";
             // 
@@ -198,9 +204,10 @@
             // lblTitle
             // 
             this.lblTitle.AutoSize = true;
+            this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.lblTitle.Location = new System.Drawing.Point(122, 18);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(43, 13);
+            this.lblTitle.Size = new System.Drawing.Size(57, 17);
             this.lblTitle.TabIndex = 21;
             this.lblTitle.Text = "Usuário";
             // 

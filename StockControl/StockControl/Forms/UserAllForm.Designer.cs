@@ -93,7 +93,7 @@
             // pbxSearch
             // 
             this.pbxSearch.Image = global::StockControl.Properties.Resources.lupa;
-            this.pbxSearch.Location = new System.Drawing.Point(207, 9);
+            this.pbxSearch.Location = new System.Drawing.Point(199, 6);
             this.pbxSearch.Name = "pbxSearch";
             this.pbxSearch.Size = new System.Drawing.Size(20, 20);
             this.pbxSearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -103,7 +103,7 @@
             // 
             // tbxSearch
             // 
-            this.tbxSearch.Location = new System.Drawing.Point(101, 9);
+            this.tbxSearch.Location = new System.Drawing.Point(93, 6);
             this.tbxSearch.Name = "tbxSearch";
             this.tbxSearch.Size = new System.Drawing.Size(100, 20);
             this.tbxSearch.TabIndex = 10;
@@ -112,10 +112,10 @@
             // lblSearch
             // 
             this.lblSearch.AutoSize = true;
-            this.lblSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSearch.Location = new System.Drawing.Point(12, 9);
+            this.lblSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSearch.Location = new System.Drawing.Point(15, 7);
             this.lblSearch.Name = "lblSearch";
-            this.lblSearch.Size = new System.Drawing.Size(83, 20);
+            this.lblSearch.Size = new System.Drawing.Size(72, 16);
             this.lblSearch.TabIndex = 9;
             this.lblSearch.Text = "Pesquisar:";
             this.lblSearch.UseWaitCursor = true;
