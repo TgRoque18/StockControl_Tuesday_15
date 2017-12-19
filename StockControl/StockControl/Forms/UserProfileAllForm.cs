@@ -34,17 +34,21 @@ namespace StockControl.Forms
 
         private void pbxBack_Click_1(object sender, EventArgs e)
         {
-
+            MainForm mainForm = new MainForm();
+            mainForm.Show();
+            this.Hide();
         }
 
         private void pbxAdd_Click(object sender, EventArgs e)
         {
-
+            UserProfileForm userProfileDetails = new UserProfileForm();
+            userProfileDetails.Show();
+            this.Hide();
         }
 
         private void pbxEdit_Click(object sender, EventArgs e)
         {
-
+           
         }
 
         private void pbxSave_Click_1(object sender, EventArgs e)

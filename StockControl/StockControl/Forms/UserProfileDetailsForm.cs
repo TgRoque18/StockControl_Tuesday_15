@@ -1,4 +1,5 @@
-﻿using System;
+﻿using StockControl.Forms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -24,7 +25,9 @@ namespace StockControl
 
         private void pbxBack_Click(object sender, EventArgs e)
         {
-
+            UserProfileAllForm userProfile = new UserProfileAllForm();
+            userProfile.Show();
+            this.Hide();
         }
 
         private void pbxSave_Click(object sender, EventArgs e)
