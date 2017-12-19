@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.lblName = new System.Windows.Forms.Label();
-            this.lblCategory = new System.Windows.Forms.Label();
             this.tbxName = new System.Windows.Forms.TextBox();
             this.lblActive = new System.Windows.Forms.Label();
             this.cbxActive = new System.Windows.Forms.CheckBox();
@@ -49,15 +48,6 @@
             this.lblName.Size = new System.Drawing.Size(38, 13);
             this.lblName.TabIndex = 0;
             this.lblName.Text = "Nome:";
-            // 
-            // lblCategory
-            // 
-            this.lblCategory.AutoSize = true;
-            this.lblCategory.Location = new System.Drawing.Point(121, 13);
-            this.lblCategory.Name = "lblCategory";
-            this.lblCategory.Size = new System.Drawing.Size(52, 13);
-            this.lblCategory.TabIndex = 1;
-            this.lblCategory.Text = "Categoria";
             // 
             // tbxName
             // 
@@ -127,7 +117,6 @@
             this.Controls.Add(this.cbxActive);
             this.Controls.Add(this.lblActive);
             this.Controls.Add(this.tbxName);
-            this.Controls.Add(this.lblCategory);
             this.Controls.Add(this.lblName);
             this.Name = "CategoryDetailsForm";
             this.Text = "Categoria";
@@ -142,7 +131,6 @@
         #endregion
 
         private System.Windows.Forms.Label lblName;
-        private System.Windows.Forms.Label lblCategory;
         private System.Windows.Forms.TextBox tbxName;
         private System.Windows.Forms.Label lblActive;
         private System.Windows.Forms.CheckBox cbxActive;

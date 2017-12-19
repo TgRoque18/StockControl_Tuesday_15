@@ -34,7 +34,6 @@
             this.tbxName = new System.Windows.Forms.TextBox();
             this.cbxActive = new System.Windows.Forms.CheckBox();
             this.numericQuantity = new System.Windows.Forms.NumericUpDown();
-            this.lblStock = new System.Windows.Forms.Label();
             this.pbxDelete = new System.Windows.Forms.PictureBox();
             this.pbxSave = new System.Windows.Forms.PictureBox();
             this.pbxBack = new System.Windows.Forms.PictureBox();
@@ -94,15 +93,6 @@
             this.numericQuantity.Size = new System.Drawing.Size(100, 20);
             this.numericQuantity.TabIndex = 6;
             // 
-            // lblStock
-            // 
-            this.lblStock.AutoSize = true;
-            this.lblStock.Location = new System.Drawing.Point(128, 9);
-            this.lblStock.Name = "lblStock";
-            this.lblStock.Size = new System.Drawing.Size(46, 13);
-            this.lblStock.TabIndex = 10;
-            this.lblStock.Text = "Estoque";
-            // 
             // pbxDelete
             // 
             this.pbxDelete.Image = global::StockControl.Properties.Resources.deletar;
@@ -141,7 +131,6 @@
             this.Controls.Add(this.pbxDelete);
             this.Controls.Add(this.pbxSave);
             this.Controls.Add(this.pbxBack);
-            this.Controls.Add(this.lblStock);
             this.Controls.Add(this.numericQuantity);
             this.Controls.Add(this.cbxActive);
             this.Controls.Add(this.tbxName);
@@ -167,7 +156,6 @@
         private System.Windows.Forms.TextBox tbxName;
         private System.Windows.Forms.CheckBox cbxActive;
         private System.Windows.Forms.NumericUpDown numericQuantity;
-        private System.Windows.Forms.Label lblStock;
         private System.Windows.Forms.PictureBox pbxBack;
         private System.Windows.Forms.PictureBox pbxSave;
         private System.Windows.Forms.PictureBox pbxDelete;

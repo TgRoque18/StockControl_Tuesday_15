@@ -47,15 +47,16 @@
             // lblSearch
             // 
             this.lblSearch.AutoSize = true;
+            this.lblSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.lblSearch.Location = new System.Drawing.Point(12, 19);
             this.lblSearch.Name = "lblSearch";
-            this.lblSearch.Size = new System.Drawing.Size(56, 13);
+            this.lblSearch.Size = new System.Drawing.Size(75, 17);
             this.lblSearch.TabIndex = 21;
             this.lblSearch.Text = "Pesquisar:";
             // 
             // tbxSearch
             // 
-            this.tbxSearch.Location = new System.Drawing.Point(72, 19);
+            this.tbxSearch.Location = new System.Drawing.Point(84, 19);
             this.tbxSearch.Name = "tbxSearch";
             this.tbxSearch.Size = new System.Drawing.Size(100, 20);
             this.tbxSearch.TabIndex = 23;
@@ -71,7 +72,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::StockControl.Properties.Resources.lupa;
-            this.pictureBox2.Location = new System.Drawing.Point(179, 19);
+            this.pictureBox2.Location = new System.Drawing.Point(191, 19);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(21, 20);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
