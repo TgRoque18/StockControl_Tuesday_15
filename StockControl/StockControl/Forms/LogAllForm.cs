@@ -24,8 +24,8 @@ namespace StockControl.Forms
 
         private void pbxBack_Click(object sender, EventArgs e)
         {
-            MainForm mainForm = new MainForm();
-            mainForm.Show();
+            HomeDetailsForm homeDetails = new HomeDetailsForm();
+            homeDetails.Show();
             this.Hide();
         }
     }

@@ -43,10 +43,10 @@
             // lblName
             // 
             this.lblName.AutoSize = true;
-            this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblName.Location = new System.Drawing.Point(63, 53);
+            this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.lblName.Location = new System.Drawing.Point(63, 54);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(59, 20);
+            this.lblName.Size = new System.Drawing.Size(53, 17);
             this.lblName.TabIndex = 1;
             this.lblName.Text = "Nome: ";
             // 
@@ -103,10 +103,10 @@
             // lblActive
             // 
             this.lblActive.AutoSize = true;
-            this.lblActive.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblActive.Location = new System.Drawing.Point(63, 99);
+            this.lblActive.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.lblActive.Location = new System.Drawing.Point(63, 102);
             this.lblActive.Name = "lblActive";
-            this.lblActive.Size = new System.Drawing.Size(48, 20);
+            this.lblActive.Size = new System.Drawing.Size(43, 17);
             this.lblActive.TabIndex = 19;
             this.lblActive.Text = "Ativo:";
             // 
