@@ -33,6 +33,8 @@
             this.pbxBack = new System.Windows.Forms.PictureBox();
             this.pbxSave = new System.Windows.Forms.PictureBox();
             this.pbxDelete = new System.Windows.Forms.PictureBox();
+            this.cbxActive = new System.Windows.Forms.CheckBox();
+            this.lblActive = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbxBack)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxSave)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxDelete)).BeginInit();
@@ -88,11 +90,33 @@
             this.pbxDelete.TabStop = false;
             this.pbxDelete.Click += new System.EventHandler(this.pbxDelete_Click);
             // 
+            // cbxActive
+            // 
+            this.cbxActive.AutoSize = true;
+            this.cbxActive.Location = new System.Drawing.Point(127, 104);
+            this.cbxActive.Name = "cbxActive";
+            this.cbxActive.Size = new System.Drawing.Size(15, 14);
+            this.cbxActive.TabIndex = 20;
+            this.cbxActive.UseVisualStyleBackColor = true;
+            this.cbxActive.CheckedChanged += new System.EventHandler(this.cbxActive_CheckedChanged);
+            // 
+            // lblActive
+            // 
+            this.lblActive.AutoSize = true;
+            this.lblActive.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblActive.Location = new System.Drawing.Point(63, 99);
+            this.lblActive.Name = "lblActive";
+            this.lblActive.Size = new System.Drawing.Size(48, 20);
+            this.lblActive.TabIndex = 19;
+            this.lblActive.Text = "Ativo:";
+            // 
             // UserProfileForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(334, 281);
+            this.Controls.Add(this.cbxActive);
+            this.Controls.Add(this.lblActive);
             this.Controls.Add(this.pbxDelete);
             this.Controls.Add(this.pbxSave);
             this.Controls.Add(this.pbxBack);
@@ -114,5 +138,7 @@
         private System.Windows.Forms.PictureBox pbxBack;
         private System.Windows.Forms.PictureBox pbxSave;
         private System.Windows.Forms.PictureBox pbxDelete;
+        private System.Windows.Forms.CheckBox cbxActive;
+        private System.Windows.Forms.Label lblActive;
     }
 }

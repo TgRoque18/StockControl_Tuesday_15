@@ -36,5 +36,10 @@ namespace StockControl
         {
 
         }
+
+        private void cbxActive_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

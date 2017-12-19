@@ -36,7 +36,6 @@
             this.pbxAdd = new System.Windows.Forms.PictureBox();
             this.pbxBack = new System.Windows.Forms.PictureBox();
             this.pbxSearch = new System.Windows.Forms.PictureBox();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxSave)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxEdit)).BeginInit();
@@ -170,6 +169,5 @@
         private System.Windows.Forms.PictureBox pbxAdd;
         private System.Windows.Forms.PictureBox pbxEdit;
         private System.Windows.Forms.PictureBox pbxSave;
-        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }

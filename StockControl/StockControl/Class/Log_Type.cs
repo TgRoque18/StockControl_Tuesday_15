@@ -10,26 +10,48 @@ namespace StockControl.Class
     {
         private int id;
         private char name;
-        private byte active;
+        private bool active;
 
         public int Id
         {
-            get => id;
-            set => id = value;
+            get
+            {
+                return id;
+            }
+
+            set
+            {
+                id = value;
+            }
         }
+
         public char Name
         {
-            get => name;
-            set => name = value;
+            get
+            {
+                return name;
+            }
+
+            set
+            {
+                name = value;
+            }
         }
 
-        public byte Active
+        public bool Active
         {
-            get => active;
-            set => active = value;
+            get
+            {
+                return active;
+            }
+
+            set
+            {
+                active = value;
+            }
         }
 
-        public Log_Type(int id, char name, byte active)
+        public Log_Type(int id, char name, bool active)
         {
             this.Active = active;
             this.Id = id;

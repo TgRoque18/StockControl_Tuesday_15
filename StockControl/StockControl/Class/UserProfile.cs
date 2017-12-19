@@ -14,22 +14,42 @@ namespace StockControl.Class
 
         public int Id
         {
-            get => id;
-            set => id = value;
+            get
+            {
+                return id;
+            }
+
+            set
+            {
+                id = value;
+            }
         }
 
         public bool Active
         {
-            get => active;
-            set => active = value;
+            get
+            {
+                return active;
+            }
+
+            set
+            {
+                active = value;
+            }
         }
 
         public char Name
         {
-            get => name;
-            set => name = value;
-        }
+            get
+            {
+                return name;
+            }
 
+            set
+            {
+                name = value;
+            }
+        }
 
         public UserProfile(int id, bool active, char name)
         {

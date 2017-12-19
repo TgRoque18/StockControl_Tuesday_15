@@ -11,45 +11,80 @@ namespace StockControl.Class
         private int id = 0;
         private int quantity = 0;
         private bool active;
-        private int fk_Product = 0;
+        private Product product;
         private char name;
 
         public int Id
         {
-            get => id;
-            set => id = value;
+            get
+            {
+                return id;
+            }
+
+            set
+            {
+                id = value;
+            }
         }
 
         public int Quantity
         {
-            get => quantity;
-            set => quantity = value;
+            get
+            {
+                return quantity;
+            }
+
+            set
+            {
+                quantity = value;
+            }
         }
 
         public bool Active
         {
-            get => active;
-            set => active = value;
-        }
+            get
+            {
+                return active;
+            }
 
-        public int Fk_Product
-        {
-            get => fk_Product;
-            set => fk_Product = value;
+            set
+            {
+                active = value;
+            }
         }
 
         public char Name
         {
-            get => name;
-            set => name = value;
+            get
+            {
+                return name;
+            }
+
+            set
+            {
+                name = value;
+            }
         }
 
-        public Stock(int id, int quantity, bool active, int fk_Product, char name)
+        public Product Product
+        {
+            get
+            {
+                return product;
+            }
+
+            set
+            {
+                product = value;
+            }
+        }
+
+        public Stock(int id, int quantity, bool active, Product product, char name)
         {
             this.Id = id;
             this.Quantity = quantity;
             this.Active = active;
-            this.Fk_Product = fk_Product;
+            this.Product = product;
             this.Name = name;
         }
     }
