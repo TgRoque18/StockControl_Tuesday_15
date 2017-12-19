@@ -8,9 +8,9 @@ namespace StockControl.Class
 {
     public class Category
     {
-        int id = 0;
-        char name;
-        bool active;
+        private int id = 0;
+        private string name;
+        private bool active;
 
         public int Id
         {
@@ -25,7 +25,7 @@ namespace StockControl.Class
             }
         }
 
-        public char Name
+        public string Name
         {
             get
             {
@@ -49,6 +49,15 @@ namespace StockControl.Class
             {
                 active = value;
             }
+        }
+
+        public Category(int id, string name, bool active)
+        {
+
+            this.Id = id;
+            this.Name = name;
+            this.Active = active;
+
         }
 
 
