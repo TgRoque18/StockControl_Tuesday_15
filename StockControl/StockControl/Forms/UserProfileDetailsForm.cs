@@ -1,4 +1,5 @@
-﻿using StockControl.Forms;
+﻿using StockControl.Class;
+using StockControl.Forms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,6 +14,9 @@ namespace StockControl
 {
     public partial class UserProfileForm : Form
     {
+        string name;
+        bool active = false;
+
         public UserProfileForm()
         {
             InitializeComponent();
@@ -32,7 +36,9 @@ namespace StockControl
 
         private void pbxSave_Click(object sender, EventArgs e)
         {
-
+            GetData();
+            UserProfile userProfile = new UserProfile(active,name);
+            CleanData();
         }
 
         private void pbxDelete_Click(object sender, EventArgs e)
@@ -43,6 +49,16 @@ namespace StockControl
         private void cbxActive_CheckedChanged(object sender, EventArgs e)
         {
 
+        }
+        void GetData()
+        {
+            name = tbxName.Text;
+            active = cbxActive.Checked;
+        }
+        void CleanData()
+        {
+            tbxName.Text = "";
+            cbxActive.Checked = false;
         }
     }
 }

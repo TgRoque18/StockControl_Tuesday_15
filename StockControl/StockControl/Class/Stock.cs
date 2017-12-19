@@ -12,7 +12,7 @@ namespace StockControl.Class
         private int quantity = 0;
         private bool active;
         private Product product;
-        private char name;
+        private string name;
 
         public int Id
         {
@@ -53,7 +53,7 @@ namespace StockControl.Class
             }
         }
 
-        public char Name
+        public string Name
         {
             get
             {
@@ -79,9 +79,17 @@ namespace StockControl.Class
             }
         }
 
-        public Stock(int id, int quantity, bool active, Product product, char name)
+        public Stock(int id, int quantity, bool active, Product product, string name)
         {
             this.Id = id;
+            this.Quantity = quantity;
+            this.Active = active;
+            this.Product = product;
+            this.Name = name;
+        }
+
+        public Stock(int quantity, bool active, Product product, string name)
+        {
             this.Quantity = quantity;
             this.Active = active;
             this.Product = product;

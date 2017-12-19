@@ -9,7 +9,7 @@ namespace StockControl.Class
     public class Log_Type
     {
         private int id;
-        private char name;
+        private string name;
         private bool active;
 
         public int Id
@@ -25,7 +25,7 @@ namespace StockControl.Class
             }
         }
 
-        public char Name
+        public string Name
         {
             get
             {
@@ -51,10 +51,16 @@ namespace StockControl.Class
             }
         }
 
-        public Log_Type(int id, char name, bool active)
+        public Log_Type(int id, string name, bool active)
         {
             this.Active = active;
             this.Id = id;
+            this.Name = name;
+        }
+
+        public Log_Type(string name, bool active)
+        {
+            this.Active = active;
             this.Name = name;
         }
     }

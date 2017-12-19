@@ -10,7 +10,7 @@ namespace StockControl.Class
     {
         private int id = 0;
         private bool active;
-        private char name;
+        private string name;
 
         public int Id
         {
@@ -38,7 +38,7 @@ namespace StockControl.Class
             }
         }
 
-        public char Name
+        public string Name
         {
             get
             {
@@ -51,9 +51,14 @@ namespace StockControl.Class
             }
         }
 
-        public UserProfile(int id, bool active, char name)
+        public UserProfile(int id, bool active, string name)
         {
             this.Id = id;
+            this.Active = active;
+            this.Name = name;
+        }
+        public UserProfile(bool active, string name)
+        {
             this.Active = active;
             this.Name = name;
         }
