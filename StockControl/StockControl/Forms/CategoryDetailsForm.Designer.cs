@@ -93,6 +93,7 @@
             this.pbxSave.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbxSave.TabIndex = 16;
             this.pbxSave.TabStop = false;
+            this.pbxSave.Click += new System.EventHandler(this.pbxSave_Click);
             // 
             // pbxDelete
             // 
@@ -113,6 +114,7 @@
             this.pbxBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbxBack.TabIndex = 13;
             this.pbxBack.TabStop = false;
+            this.pbxBack.Click += new System.EventHandler(this.pbxBack_Click);
             // 
             // CategoryDetailsForm
             // 

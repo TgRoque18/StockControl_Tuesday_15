@@ -81,6 +81,7 @@
             this.pbxLogIn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbxLogIn.TabIndex = 5;
             this.pbxLogIn.TabStop = false;
+            this.pbxLogIn.Click += new System.EventHandler(this.pbxLogIn_Click);
             // 
             // pictureBox1
             // 
@@ -101,8 +102,9 @@
             this.pbxRecovery.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbxRecovery.TabIndex = 6;
             this.pbxRecovery.TabStop = false;
+            this.pbxRecovery.Click += new System.EventHandler(this.pbxRecovery_Click);
             // 
-            // Login
+            // LoginDetailsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -114,7 +116,7 @@
             this.Controls.Add(this.tbxPassword);
             this.Controls.Add(this.tbxUser);
             this.Controls.Add(this.pictureBox1);
-            this.Name = "Login";
+            this.Name = "LoginDetailsForm";
             this.Text = "Login";
             ((System.ComponentModel.ISupportInitialize)(this.pbxLogIn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

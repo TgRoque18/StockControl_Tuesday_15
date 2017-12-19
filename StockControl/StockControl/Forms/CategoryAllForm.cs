@@ -16,5 +16,22 @@ namespace StockControl.Forms
         {
             InitializeComponent();
         }
+
+        private void pbxBack_Click(object sender, EventArgs e)
+        {
+            HomeDetailsForm homeForm = new HomeDetailsForm();
+
+            homeForm.Show();
+            this.Hide();
+
+        }
+
+        private void pbxAdd_Click(object sender, EventArgs e)
+        {
+            CategoryDetailsForm categoryForm = new CategoryDetailsForm();
+
+            categoryForm.Show();
+            this.Hide();
+        }
     }
 }

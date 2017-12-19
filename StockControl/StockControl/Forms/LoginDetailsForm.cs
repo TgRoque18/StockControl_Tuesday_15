@@ -12,9 +12,46 @@ namespace StockControl.Forms
 {
     public partial class LoginDetailsForm : Form
     {
+        string user;
+        string password;
+
         public LoginDetailsForm()
         {
             InitializeComponent();
         }
+
+        private void pbxLogIn_Click(object sender, EventArgs e)
+        {
+            GetData();
+
+            HomeDetailsForm homeForm = new HomeDetailsForm();
+
+            homeForm.Show();
+            this.Hide();
+
+        }
+
+        private void pbxRecovery_Click(object sender, EventArgs e)
+        {
+            RecoveryEmailForm recoveryEmailForm = new RecoveryEmailForm();
+
+            recoveryEmailForm.Show();
+            this.Hide();
+
+        }
+
+        void GetData()
+        {
+            user = tbxUser.Text;
+            password = tbxPassword.Text;
+        }
+
+        void CleanData()
+        {
+            tbxUser.Text = "";
+            tbxPassword.Text = "";
+        }
+
+
     }
 }

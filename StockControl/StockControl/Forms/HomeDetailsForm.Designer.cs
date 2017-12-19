@@ -63,6 +63,7 @@
             this.pbxLog.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbxLog.TabIndex = 6;
             this.pbxLog.TabStop = false;
+            this.pbxLog.Click += new System.EventHandler(this.pbxLog_Click);
             // 
             // pbxUser
             // 
@@ -73,6 +74,7 @@
             this.pbxUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbxUser.TabIndex = 5;
             this.pbxUser.TabStop = false;
+            this.pbxUser.Click += new System.EventHandler(this.pbxUser_Click);
             // 
             // pbxUserProfile
             // 
@@ -83,6 +85,7 @@
             this.pbxUserProfile.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbxUserProfile.TabIndex = 4;
             this.pbxUserProfile.TabStop = false;
+            this.pbxUserProfile.Click += new System.EventHandler(this.pbxUserProfile_Click);
             // 
             // pbxProduct
             // 
@@ -103,6 +106,7 @@
             this.pbxCategory.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbxCategory.TabIndex = 2;
             this.pbxCategory.TabStop = false;
+            this.pbxCategory.Click += new System.EventHandler(this.pbxCategory_Click);
             // 
             // pbxStock
             // 
@@ -113,6 +117,7 @@
             this.pbxStock.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbxStock.TabIndex = 1;
             this.pbxStock.TabStop = false;
+            this.pbxStock.Click += new System.EventHandler(this.pbxStock_Click);
             // 
             // pbxBack
             // 
@@ -123,8 +128,9 @@
             this.pbxBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbxBack.TabIndex = 0;
             this.pbxBack.TabStop = false;
+            this.pbxBack.Click += new System.EventHandler(this.pbxBack_Click);
             // 
-            // Home
+            // HomeDetailsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -137,7 +143,7 @@
             this.Controls.Add(this.pbxCategory);
             this.Controls.Add(this.pbxStock);
             this.Controls.Add(this.pbxBack);
-            this.Name = "Home";
+            this.Name = "HomeDetailsForm";
             this.Text = "Home";
             ((System.ComponentModel.ISupportInitialize)(this.pbxLog)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxUser)).EndInit();
