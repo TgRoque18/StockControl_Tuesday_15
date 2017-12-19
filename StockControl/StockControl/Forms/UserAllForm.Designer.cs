@@ -76,6 +76,7 @@
             this.pbxAdd.TabIndex = 13;
             this.pbxAdd.TabStop = false;
             this.pbxAdd.UseWaitCursor = true;
+            this.pbxAdd.Click += new System.EventHandler(this.pbxAdd_Click);
             // 
             // pbxBack
             // 
@@ -87,6 +88,7 @@
             this.pbxBack.TabIndex = 12;
             this.pbxBack.TabStop = false;
             this.pbxBack.UseWaitCursor = true;
+            this.pbxBack.Click += new System.EventHandler(this.pbxBack_Click);
             // 
             // pbxSearch
             // 

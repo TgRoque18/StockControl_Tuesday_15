@@ -103,7 +103,15 @@ namespace StockControl.Class
             this.Active = active;
             this.UserProfile = userProfile;
         }
-
+        public User( string name, string password, string email, bool active, UserProfile userProfile)
+        {
+            
+            this.Name = name;
+            this.Password = password;
+            this.Email = email;
+            this.Active = active;
+            this.UserProfile = userProfile;
+        }
 
 
     }
