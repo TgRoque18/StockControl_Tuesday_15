@@ -8,12 +8,12 @@ namespace StockControl.Class
 {
     public class User
     {
-        int id = 0;
-        char name;
-        char password;
-        char email;
-        bool active;
-        //UserProfile userProfile;
+        private int id = 0;
+        private string name;
+        private string password;
+        private string email;
+        private bool active;
+        private UserProfile userProfile;
 
         public int Id
         {
@@ -28,7 +28,7 @@ namespace StockControl.Class
             }
         }
 
-        public char Name
+        public string Name
         {
             get
             {
@@ -41,7 +41,7 @@ namespace StockControl.Class
             }
         }
 
-        public char Password
+        public string Password
         {
             get
             {
@@ -54,7 +54,7 @@ namespace StockControl.Class
             }
         }
 
-        public char Email
+        public string Email
         {
             get
             {
@@ -79,7 +79,31 @@ namespace StockControl.Class
                 active = value;
             }
         }
-       
+
+        public UserProfile UserProfile
+        {
+            get
+            {
+                return userProfile;
+            }
+
+            set
+            {
+                userProfile = value;
+            }
+        }
+
+
+        public User(int id, string name, string password, string email, bool active, UserProfile userProfile)
+        {
+            this.Id = id;
+            this.Name = name;
+            this.Password = password;
+            this.Email = email;
+            this.Active = active;
+            this.UserProfile = userProfile;
+        }
+
 
 
     }

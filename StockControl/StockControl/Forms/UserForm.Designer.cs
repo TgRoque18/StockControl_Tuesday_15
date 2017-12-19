@@ -45,14 +45,14 @@
             this.pbxBack = new System.Windows.Forms.PictureBox();
             this.pbxProfilePicture = new System.Windows.Forms.PictureBox();
             this.lblTitle = new System.Windows.Forms.Label();
-            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.tbxArchiveLocal = new System.Windows.Forms.TextBox();
-            this.pbxAddImage = new System.Windows.Forms.PictureBox();
+            this.ofdSearchProfilePicture = new System.Windows.Forms.OpenFileDialog();
+            this.tbxFileName = new System.Windows.Forms.TextBox();
+            this.pbxAddProfilePicture = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbxSave)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxDelete)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxBack)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxProfilePicture)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxAddImage)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxAddProfilePicture)).BeginInit();
             this.SuspendLayout();
             // 
             // lblName
@@ -189,7 +189,7 @@
             this.pbxProfilePicture.Location = new System.Drawing.Point(194, 55);
             this.pbxProfilePicture.Name = "pbxProfilePicture";
             this.pbxProfilePicture.Size = new System.Drawing.Size(78, 75);
-            this.pbxProfilePicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pbxProfilePicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbxProfilePicture.TabIndex = 20;
             this.pbxProfilePicture.TabStop = false;
             // 
@@ -202,35 +202,37 @@
             this.lblTitle.TabIndex = 21;
             this.lblTitle.Text = "Usuário";
             // 
-            // openFileDialog1
+            // ofdSearchProfilePicture
             // 
-            this.openFileDialog1.FileName = "openFileDialog1";
-  
+            this.ofdSearchProfilePicture.FileName = "openFileDialog1";
+            this.ofdSearchProfilePicture.Filter = "\"Images (*.BMP;*.JPG;*.GIF,*.PNG,*.TIFF)|*.BMP;*.JPG;*.GIF;*.PNG;*.TIFF|\" + \"All " +
+    "files (*.*)|*.*\"";
             // 
-            // tbxArchiveLocal
+            // tbxFileName
             // 
-            this.tbxArchiveLocal.Location = new System.Drawing.Point(219, 141);
-            this.tbxArchiveLocal.Name = "tbxArchiveLocal";
-            this.tbxArchiveLocal.Size = new System.Drawing.Size(53, 20);
-            this.tbxArchiveLocal.TabIndex = 22;
+            this.tbxFileName.Location = new System.Drawing.Point(219, 141);
+            this.tbxFileName.Name = "tbxFileName";
+            this.tbxFileName.Size = new System.Drawing.Size(53, 20);
+            this.tbxFileName.TabIndex = 22;
             // 
-            // pbxAddImage
+            // pbxAddProfilePicture
             // 
-            this.pbxAddImage.Image = global::StockControl.Properties.Resources.mais_1;
-            this.pbxAddImage.Location = new System.Drawing.Point(194, 141);
-            this.pbxAddImage.Name = "pbxAddImage";
-            this.pbxAddImage.Size = new System.Drawing.Size(19, 20);
-            this.pbxAddImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbxAddImage.TabIndex = 23;
-            this.pbxAddImage.TabStop = false;
+            this.pbxAddProfilePicture.Image = global::StockControl.Properties.Resources.mais_1;
+            this.pbxAddProfilePicture.Location = new System.Drawing.Point(194, 141);
+            this.pbxAddProfilePicture.Name = "pbxAddProfilePicture";
+            this.pbxAddProfilePicture.Size = new System.Drawing.Size(19, 20);
+            this.pbxAddProfilePicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbxAddProfilePicture.TabIndex = 23;
+            this.pbxAddProfilePicture.TabStop = false;
+            this.pbxAddProfilePicture.Click += new System.EventHandler(this.pbxAddImage_Click);
             // 
             // UserForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 261);
-            this.Controls.Add(this.pbxAddImage);
-            this.Controls.Add(this.tbxArchiveLocal);
+            this.Controls.Add(this.pbxAddProfilePicture);
+            this.Controls.Add(this.tbxFileName);
             this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.pbxProfilePicture);
             this.Controls.Add(this.pbxSave);
@@ -254,7 +256,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbxDelete)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxBack)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxProfilePicture)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxAddImage)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxAddProfilePicture)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -279,8 +281,8 @@
         private System.Windows.Forms.PictureBox pbxBack;
         private System.Windows.Forms.PictureBox pbxProfilePicture;
         private System.Windows.Forms.Label lblTitle;
-        private System.Windows.Forms.OpenFileDialog openFileDialog1;
-        private System.Windows.Forms.TextBox tbxArchiveLocal;
-        private System.Windows.Forms.PictureBox pbxAddImage;
+        private System.Windows.Forms.OpenFileDialog ofdSearchProfilePicture;
+        private System.Windows.Forms.TextBox tbxFileName;
+        private System.Windows.Forms.PictureBox pbxAddProfilePicture;
     }
 }

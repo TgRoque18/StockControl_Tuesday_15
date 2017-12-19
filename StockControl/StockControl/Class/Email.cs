@@ -14,6 +14,15 @@ namespace StockControl.Class
         private char body;
         private char subject;
 
+        public Email(char to, char date, char from, char body, char subject)
+        {
+            this.To = to;
+            this.Date = date;
+            this.From = from;
+            this.Body = body;
+            this.Subject = subject;
+        }
+
         public char To
         {
             get

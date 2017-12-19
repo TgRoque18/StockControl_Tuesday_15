@@ -52,6 +52,7 @@
     <Compile Include="Class\Log.cs" />
     <Compile Include="Class\Email.cs" />
     <Compile Include="Class\Stock.cs" />
+    <Compile Include="Class\User.cs" />
     <Compile Include="Class\UserProfile.cs" />
     <Compile Include="DAO\CategoryDAO.cs" />
     <Compile Include="Forms\CategoryAllForm.cs">
@@ -108,6 +109,12 @@
     <Compile Include="Forms\StockAllForm.Designer.cs">
       <DependentUpon>StockAllForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\UserAllForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\UserAllForm.Designer.cs">
+      <DependentUpon>UserAllForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\UserForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -152,6 +159,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\StockDetailsForm.resx">
       <DependentUpon>StockDetailsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UserAllForm.resx">
+      <DependentUpon>UserAllForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\UserForm.resx">
       <DependentUpon>UserForm.cs</DependentUpon>
