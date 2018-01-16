@@ -17,21 +17,6 @@ namespace StockControl.Forms
             InitializeComponent();
         }
 
-        private void pbxBack_Click(object sender, EventArgs e)
-        {
-            //erro
-        }
-
-        private void pbxSave_Click(object sender, EventArgs e)
-        {
-            //erro
-        }
-
-        private void pbxDelete_Click(object sender, EventArgs e)
-        {
-            //erro
-        }
-
         private void pbxBack_Click_1(object sender, EventArgs e)
         {
             HomeDetailsForm homeDetails = new HomeDetailsForm();
@@ -48,12 +33,9 @@ namespace StockControl.Forms
 
         private void pbxEdit_Click(object sender, EventArgs e)
         {
-           
-        }
-
-        private void pbxSave_Click_1(object sender, EventArgs e)
-        {
-            //erro
+            UserProfileForm userProfileDetails = new UserProfileForm();
+            userProfileDetails.Show();
+            this.Hide();
         }
 
         private void pbxSearch_Click(object sender, EventArgs e)
