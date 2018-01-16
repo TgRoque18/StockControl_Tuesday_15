@@ -47,7 +47,7 @@
             // dgvStock
             // 
             this.dgvStock.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvStock.Location = new System.Drawing.Point(12, 50);
+            this.dgvStock.Location = new System.Drawing.Point(15, 41);
             this.dgvStock.Name = "dgvStock";
             this.dgvStock.Size = new System.Drawing.Size(260, 150);
             this.dgvStock.TabIndex = 32;
@@ -88,6 +88,7 @@
             this.pbxAdd.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbxAdd.TabIndex = 28;
             this.pbxAdd.TabStop = false;
+            this.pbxAdd.Click += new System.EventHandler(this.pbxAdd_Click);
             // 
             // pbxEdit
             // 
@@ -98,6 +99,7 @@
             this.pbxEdit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbxEdit.TabIndex = 27;
             this.pbxEdit.TabStop = false;
+            this.pbxEdit.Click += new System.EventHandler(this.pbxEdit_Click);
             // 
             // pbxDelete
             // 
@@ -118,6 +120,7 @@
             this.pbxBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbxBack.TabIndex = 25;
             this.pbxBack.TabStop = false;
+            this.pbxBack.Click += new System.EventHandler(this.pbxBack_Click);
             // 
             // StockAllForm
             // 

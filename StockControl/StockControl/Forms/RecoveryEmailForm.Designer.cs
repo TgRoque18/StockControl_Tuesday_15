@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tbxEmail = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblEmail = new System.Windows.Forms.Label();
             this.pbxBack = new System.Windows.Forms.PictureBox();
@@ -36,12 +36,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbxBack)).BeginInit();
             this.SuspendLayout();
             // 
-            // textBox1
+            // tbxEmail
             // 
-            this.textBox1.Location = new System.Drawing.Point(83, 114);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(95, 20);
-            this.textBox1.TabIndex = 1;
+            this.tbxEmail.Location = new System.Drawing.Point(83, 114);
+            this.tbxEmail.Name = "tbxEmail";
+            this.tbxEmail.Size = new System.Drawing.Size(95, 20);
+            this.tbxEmail.TabIndex = 1;
             // 
             // pictureBox1
             // 
@@ -52,6 +52,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // lblEmail
             // 
@@ -71,6 +72,7 @@
             this.pbxBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbxBack.TabIndex = 4;
             this.pbxBack.TabStop = false;
+            this.pbxBack.Click += new System.EventHandler(this.pbxBack_Click);
             // 
             // RecoveryEmailForm
             // 
@@ -80,7 +82,7 @@
             this.Controls.Add(this.pbxBack);
             this.Controls.Add(this.lblEmail);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tbxEmail);
             this.Name = "RecoveryEmailForm";
             this.Text = "Recuperar Senha";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -91,7 +93,7 @@
         }
 
         #endregion
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbxEmail;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.PictureBox pbxBack;

@@ -33,11 +33,10 @@
             this.lblActive = new System.Windows.Forms.Label();
             this.tbxName = new System.Windows.Forms.TextBox();
             this.cbxActive = new System.Windows.Forms.CheckBox();
-            this.numericQuantity = new System.Windows.Forms.NumericUpDown();
             this.pbxDelete = new System.Windows.Forms.PictureBox();
             this.pbxSave = new System.Windows.Forms.PictureBox();
             this.pbxBack = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.numericQuantity)).BeginInit();
+            this.tbxQuantity = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbxDelete)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxSave)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxBack)).BeginInit();
@@ -86,13 +85,6 @@
             this.cbxActive.TabIndex = 5;
             this.cbxActive.UseVisualStyleBackColor = true;
             // 
-            // numericQuantity
-            // 
-            this.numericQuantity.Location = new System.Drawing.Point(63, 73);
-            this.numericQuantity.Name = "numericQuantity";
-            this.numericQuantity.Size = new System.Drawing.Size(100, 20);
-            this.numericQuantity.TabIndex = 6;
-            // 
             // pbxDelete
             // 
             this.pbxDelete.Image = global::StockControl.Properties.Resources.deletar;
@@ -102,6 +94,7 @@
             this.pbxDelete.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbxDelete.TabIndex = 14;
             this.pbxDelete.TabStop = false;
+            this.pbxDelete.Click += new System.EventHandler(this.pbxDelete_Click);
             // 
             // pbxSave
             // 
@@ -112,6 +105,7 @@
             this.pbxSave.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbxSave.TabIndex = 13;
             this.pbxSave.TabStop = false;
+            this.pbxSave.Click += new System.EventHandler(this.pbxSave_Click);
             // 
             // pbxBack
             // 
@@ -122,16 +116,24 @@
             this.pbxBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbxBack.TabIndex = 12;
             this.pbxBack.TabStop = false;
+            this.pbxBack.Click += new System.EventHandler(this.pbxBack_Click);
+            // 
+            // tbxQuantity
+            // 
+            this.tbxQuantity.Location = new System.Drawing.Point(63, 73);
+            this.tbxQuantity.Name = "tbxQuantity";
+            this.tbxQuantity.Size = new System.Drawing.Size(100, 20);
+            this.tbxQuantity.TabIndex = 15;
             // 
             // StockDetailsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 262);
+            this.Controls.Add(this.tbxQuantity);
             this.Controls.Add(this.pbxDelete);
             this.Controls.Add(this.pbxSave);
             this.Controls.Add(this.pbxBack);
-            this.Controls.Add(this.numericQuantity);
             this.Controls.Add(this.cbxActive);
             this.Controls.Add(this.tbxName);
             this.Controls.Add(this.lblActive);
@@ -139,7 +141,6 @@
             this.Controls.Add(this.lblName);
             this.Name = "StockDetailsForm";
             this.Text = "Estoque";
-            ((System.ComponentModel.ISupportInitialize)(this.numericQuantity)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxDelete)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxSave)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxBack)).EndInit();
@@ -155,9 +156,9 @@
         private System.Windows.Forms.Label lblActive;
         private System.Windows.Forms.TextBox tbxName;
         private System.Windows.Forms.CheckBox cbxActive;
-        private System.Windows.Forms.NumericUpDown numericQuantity;
         private System.Windows.Forms.PictureBox pbxBack;
         private System.Windows.Forms.PictureBox pbxSave;
         private System.Windows.Forms.PictureBox pbxDelete;
+        private System.Windows.Forms.TextBox tbxQuantity;
     }
 }
