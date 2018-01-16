@@ -98,7 +98,6 @@
             this.cbxActive.Size = new System.Drawing.Size(15, 14);
             this.cbxActive.TabIndex = 20;
             this.cbxActive.UseVisualStyleBackColor = true;
-            this.cbxActive.CheckedChanged += new System.EventHandler(this.cbxActive_CheckedChanged);
             // 
             // lblActive
             // 
