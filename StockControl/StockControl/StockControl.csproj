@@ -79,6 +79,18 @@
     <Compile Include="Forms\LogAllForm.Designer.cs">
       <DependentUpon>LogAllForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\ProductAllForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ProductAllForm.Designer.cs">
+      <DependentUpon>ProductAllForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ProductDetailsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ProductDetailsForm.Designer.cs">
+      <DependentUpon>ProductDetailsForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\RecoveryEmailForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -147,6 +159,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\LogAllForm.resx">
       <DependentUpon>LogAllForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ProductAllForm.resx">
+      <DependentUpon>ProductAllForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ProductDetailsForm.resx">
+      <DependentUpon>ProductDetailsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\RecoveryEmailForm.resx">
       <DependentUpon>RecoveryEmailForm.cs</DependentUpon>
