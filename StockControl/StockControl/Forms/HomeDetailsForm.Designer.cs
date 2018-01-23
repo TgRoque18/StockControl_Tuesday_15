@@ -36,6 +36,7 @@
             this.pbxCategory = new System.Windows.Forms.PictureBox();
             this.pbxStock = new System.Windows.Forms.PictureBox();
             this.pbxBack = new System.Windows.Forms.PictureBox();
+            this.lblEstoque = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbxLog)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxUser)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxUserProfile)).BeginInit();
@@ -110,6 +111,8 @@
             // 
             // pbxStock
             // 
+            this.pbxStock.BackColor = System.Drawing.SystemColors.Control;
+            this.pbxStock.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbxStock.Image = global::StockControl.Properties.Resources.estoque2;
             this.pbxStock.Location = new System.Drawing.Point(29, 56);
             this.pbxStock.Name = "pbxStock";
@@ -118,6 +121,8 @@
             this.pbxStock.TabIndex = 1;
             this.pbxStock.TabStop = false;
             this.pbxStock.Click += new System.EventHandler(this.pbxStock_Click);
+            this.pbxStock.MouseEnter += new System.EventHandler(this.pbxStock_MouseEnter);
+            this.pbxStock.MouseLeave += new System.EventHandler(this.pbxStock_MouseLeave);
             // 
             // pbxBack
             // 
@@ -130,11 +135,23 @@
             this.pbxBack.TabStop = false;
             this.pbxBack.Click += new System.EventHandler(this.pbxBack_Click);
             // 
+            // lblEstoque
+            // 
+            this.lblEstoque.BackColor = System.Drawing.Color.Transparent;
+            this.lblEstoque.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEstoque.Location = new System.Drawing.Point(29, 111);
+            this.lblEstoque.Name = "lblEstoque";
+            this.lblEstoque.Size = new System.Drawing.Size(61, 19);
+            this.lblEstoque.TabIndex = 8;
+            this.lblEstoque.Text = "Estoque";
+            this.lblEstoque.Visible = false;
+            // 
             // HomeDetailsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 262);
+            this.Controls.Add(this.lblEstoque);
             this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.pbxLog);
             this.Controls.Add(this.pbxUser);
@@ -167,5 +184,6 @@
         private System.Windows.Forms.PictureBox pbxUser;
         private System.Windows.Forms.PictureBox pbxLog;
         private System.Windows.Forms.Label lblTitle;
+        private System.Windows.Forms.Label lblEstoque;
     }
 }

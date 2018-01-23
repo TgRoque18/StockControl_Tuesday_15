@@ -70,5 +70,17 @@ namespace StockControl.Forms
             this.Hide();
 
         }
+
+        private void pbxStock_MouseEnter(object sender, EventArgs e)
+        {
+            pbxStock.BackColor = Color.DeepSkyBlue;
+            lblEstoque.Visible = true;
+        }
+
+        private void pbxStock_MouseLeave(object sender, EventArgs e)
+        {
+            pbxStock.BackColor = Color.White;
+            lblEstoque.Visible = false;
+        }
     }
 }
