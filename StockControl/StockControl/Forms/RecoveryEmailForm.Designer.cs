@@ -85,6 +85,7 @@
             this.Controls.Add(this.tbxEmail);
             this.Name = "RecoveryEmailForm";
             this.Text = "Recuperar Senha";
+            this.Load += new System.EventHandler(this.RecoveryEmailForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxBack)).EndInit();
             this.ResumeLayout(false);

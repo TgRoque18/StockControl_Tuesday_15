@@ -162,6 +162,7 @@
             this.Controls.Add(this.pbxBack);
             this.Name = "HomeDetailsForm";
             this.Text = "Home";
+            this.Load += new System.EventHandler(this.HomeDetailsForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbxLog)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxUser)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxUserProfile)).EndInit();

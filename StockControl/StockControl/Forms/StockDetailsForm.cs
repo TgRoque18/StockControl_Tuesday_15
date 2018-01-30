@@ -96,5 +96,9 @@ namespace StockControl.Forms
             tbxQuantity.Text = "";
         }
 
+        private void StockDetailsForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

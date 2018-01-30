@@ -82,5 +82,10 @@ namespace StockControl.Forms
             pbxStock.BackColor = Color.White;
             lblEstoque.Visible = false;
         }
+
+        private void HomeDetailsForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

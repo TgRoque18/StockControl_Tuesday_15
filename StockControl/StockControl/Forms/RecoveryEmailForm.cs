@@ -52,5 +52,10 @@ namespace StockControl.Forms
         {
             tbxEmail.Text = "";
         }
+
+        private void RecoveryEmailForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
