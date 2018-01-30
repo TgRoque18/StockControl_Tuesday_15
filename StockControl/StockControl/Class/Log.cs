@@ -1,56 +1,33 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace StockControl.Class
 {
-    public class Log
+    public static class Log
     {
-        int id = 0;
-        int description = 0;
-        int date = 0;
-        //LogType logType;
-
-        public int Id
+        public static void SalvarLog(string description, DateTime date)
         {
-            get
-            {
-                return id;
-            }
+            string connectionString = "workstation id=StockControl.mssql.somee.com;packet size = 4096; user id = luacademy_SQLLogin_1; pwd=msctq6gvt3;data source = StockControl.mssql.somee.com; persist security info=False;initial catalog = StockControl";
 
-            set
-            {
-                id = value;
-            }
+            SqlConnection sqlConnect = new SqlConnection(connectionString);
+
+            //Conectar
+            sqlConnect.Open();
+            string sql = "INSERT INTO LOG (DESCRIPTION, DATE) VALUES (@description, @date)";
+            //string sql = "INSERT INTO CATEGORY(NAME, ACTIVE) VALUES (" 
+            //    + this.tbxName.Text + "," + this.cbxActive.Checked + ")";
+
+            SqlCommand cmd = new SqlCommand(sql, sqlConnect);
+
+            cmd.Parameters.Add(new SqlParameter("@description", description));
+            cmd.Parameters.Add(new SqlParameter("@date", date));
+
+            cmd.ExecuteNonQuery();
+
         }
-
-        public int Description
-        {
-            get
-            {
-                return description;
-            }
-
-            set
-            {
-                description = value;
-            }
-        }
-
-        public int Date
-        {
-            get
-            {
-                return date;
-            }
-
-            set
-            {
-                date = value;
-            }
-        }
-
     }
 }
