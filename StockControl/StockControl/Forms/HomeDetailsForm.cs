@@ -135,7 +135,9 @@ namespace StockControl.Forms
 
         private void pbxProduct_Click(object sender, EventArgs e)
         {
-
+            ProductAllForm p = new ProductAllForm();
+            p.Show();
+            this.Hide();
         }
 
         private void pbxProduct_MouseEnter(object sender, EventArgs e)
