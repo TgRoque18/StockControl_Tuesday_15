@@ -30,10 +30,10 @@
         {
             this.tbxSearch = new System.Windows.Forms.TextBox();
             this.lblSearch = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvLog = new System.Windows.Forms.DataGridView();
             this.pbxBack = new System.Windows.Forms.PictureBox();
             this.pbxSearch = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvLog)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxBack)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxSearch)).BeginInit();
             this.SuspendLayout();
@@ -57,14 +57,20 @@
             this.lblSearch.Text = "Pesquisar:";
             this.lblSearch.UseWaitCursor = true;
             // 
-            // dataGridView1
+            // dgvLog
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 31);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(310, 199);
-            this.dataGridView1.TabIndex = 5;
-            this.dataGridView1.UseWaitCursor = true;
+            this.dgvLog.AllowUserToAddRows = false;
+            this.dgvLog.AllowUserToDeleteRows = false;
+            this.dgvLog.AllowUserToOrderColumns = true;
+            this.dgvLog.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvLog.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.dgvLog.Location = new System.Drawing.Point(12, 31);
+            this.dgvLog.MultiSelect = false;
+            this.dgvLog.Name = "dgvLog";
+            this.dgvLog.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvLog.Size = new System.Drawing.Size(310, 199);
+            this.dgvLog.TabIndex = 5;
+            this.dgvLog.UseWaitCursor = true;
             // 
             // pbxBack
             // 
@@ -99,10 +105,10 @@
             this.Controls.Add(this.pbxBack);
             this.Controls.Add(this.tbxSearch);
             this.Controls.Add(this.lblSearch);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvLog);
             this.Name = "LogAllForm";
             this.Text = "Log";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvLog)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxBack)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxSearch)).EndInit();
             this.ResumeLayout(false);
@@ -115,7 +121,7 @@
         private System.Windows.Forms.PictureBox pbxBack;
         private System.Windows.Forms.TextBox tbxSearch;
         private System.Windows.Forms.Label lblSearch;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvLog;
         private System.Windows.Forms.PictureBox pbxSearch;
     }
 }
