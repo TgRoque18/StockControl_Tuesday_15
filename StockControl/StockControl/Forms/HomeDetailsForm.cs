@@ -74,13 +74,80 @@ namespace StockControl.Forms
         private void pbxStock_MouseEnter(object sender, EventArgs e)
         {
             pbxStock.BackColor = Color.DeepSkyBlue;
-            lblEstoque.Visible = true;
+            lblStock.Visible = true;
         }
 
         private void pbxStock_MouseLeave(object sender, EventArgs e)
         {
-            pbxStock.BackColor = Color.White;
-            lblEstoque.Visible = false;
+            pbxStock.BackColor = Color.Transparent;
+            lblStock.Visible = false;
+        }
+
+
+        private void pbxCategory_MouseEnter(object sender, EventArgs e)
+        {
+            pbxCategory.BackColor = Color.DeepSkyBlue;
+            lblCategory.Visible = true;
+        }
+
+        private void pbxCategory_MouseLeave(object sender, EventArgs e)
+        {
+            pbxCategory.BackColor = Color.Transparent;
+            lblCategory.Visible = false;
+        }
+
+
+        private void pbxLog_MouseEnter(object sender, EventArgs e)
+        {
+            pbxLog.BackColor = Color.DeepSkyBlue;
+            lblLog.Visible = true;
+        }
+
+        private void pbxLog_MouseLeave(object sender, EventArgs e)
+        {
+            pbxLog.BackColor = Color.Transparent;
+            lblLog.Visible = false;
+        }
+
+
+        private void pbxUser_MouseEnter(object sender, EventArgs e)
+        {
+            pbxUser.BackColor = Color.DeepSkyBlue;
+            lblUser.Visible = true;
+        }
+
+        private void pbxUser_MouseLeave(object sender, EventArgs e)
+        {
+            pbxUser.BackColor = Color.Transparent;
+            lblUser.Visible = false;
+        }
+
+        private void pbxUserProfile_MouseEnter(object sender, EventArgs e)
+        {
+            pbxUserProfile.BackColor = Color.DeepSkyBlue;
+            lblProfile.Visible = true;
+        }
+        private void pbxUserProfile_MouseLeave(object sender, EventArgs e)
+        {
+            pbxUserProfile.BackColor = Color.Transparent;
+            lblProfile.Visible = false;
+        }
+
+        private void pbxProduct_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pbxProduct_MouseEnter(object sender, EventArgs e)
+        {
+            pbxProduct.BackColor = Color.DeepSkyBlue;
+            lblProduct.Visible = true;
+        }
+
+        private void pbxProduct_MouseLeave(object sender, EventArgs e)
+        {
+            pbxProduct.BackColor = Color.Transparent;
+            lblProduct.Visible = false;
         }
 
         private void HomeDetailsForm_Load(object sender, EventArgs e)
