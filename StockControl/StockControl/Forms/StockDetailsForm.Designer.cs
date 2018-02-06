@@ -141,6 +141,7 @@
             this.Controls.Add(this.lblName);
             this.Name = "StockDetailsForm";
             this.Text = "Estoque";
+            this.Load += new System.EventHandler(this.StockDetailsForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbxDelete)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxSave)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxBack)).EndInit();

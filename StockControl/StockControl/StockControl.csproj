@@ -216,6 +216,8 @@
   <ItemGroup />
   <ItemGroup>
     <Content Include="Icons\categoria.png" />
+    <None Include="Resources\user1.png" />
+    <None Include="Resources\carrinho.png" />
     <None Include="Icons\confirm.png" />
     <Content Include="Icons\deletar.png" />
     <Content Include="Icons\editar2.png" />
