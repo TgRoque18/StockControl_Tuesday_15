@@ -176,6 +176,7 @@
             this.Controls.Add(this.lblName);
             this.Name = "ProductDetailsForm";
             this.Text = "ProductDetailsForm";
+            this.Load += new System.EventHandler(this.ProductDetailsForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbxSave)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxReturn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxDelete)).EndInit();
