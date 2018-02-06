@@ -30,6 +30,80 @@ namespace StockControl.Forms
             cmbCategory.DisplayMember = "NAME";
         }
 
+        public ProductDetailsForm(int idProduct)
+        {
+            InitializeComponent();
+
+            lblId.Text = idProduct.ToString(); //-------
+
+            SqlConnection sqlConnect = new SqlConnection(connectionString);
+
+            if (!string.IsNullOrEmpty(lblId.Text))
+            {
+                try
+                {
+                    //Conectar
+                    sqlConnect.Open();
+
+                    SqlCommand cmd = new SqlCommand("SELECT * FROM PRODUCT WHERE ID = @id", sqlConnect);
+                    //SqlCommand cmd = new SqlCommand("SELECT * FROM CATEGORY WHERE ID = " + idCategory.ToString(), sqlConnect);
+
+                    cmd.Parameters.Add(new SqlParameter("@id", idProduct));
+
+                    Product product = new Product(); //------
+
+                    using (SqlDataReader reader = cmd.ExecuteReader()) //-----
+                    {
+                        while (reader.Read())
+                        {
+                            product.Id = Int32.Parse(reader["ID"].ToString());
+                            product.Name = reader["NAME"].ToString();
+                            product.Price = float.Parse(reader["PRICE"].ToString());
+                            if(reader["ACTIVE"].ToString() == 1.ToString())
+                            {
+                                product.Active = true;
+                            }
+                            else
+                            {
+                                product.Active = false;
+                            }
+                            
+                            //product.Category =
+                            //{
+                            //    Id = Int32.Parse(reader["FK_CATEGORY"].ToString())
+                            //};
+
+                        }
+                    }
+
+                    tbxName.Text = product.Name;
+                    cbxActivation.Checked = product.Active;
+                    
+
+                    //Busca o index baseado no Select
+                    int indexCombo = 0;
+                    //if (user.UserProfile != null)
+                    //{
+                    //    indexCombo = user.UserProfile.Id;
+                    //}
+
+                    ////Inicializa o dropDown com as informações do banco
+                    //InitializeComboBox(cbxProfile, indexCombo);
+
+                }
+                catch (Exception EX)
+                {
+                    //Tratar exceções
+                    throw;
+                }
+                finally
+                {
+                    //Fechar
+                    sqlConnect.Close();
+                }
+            }
+        }
+
         private void LoadComboBox()
         {
             SqlConnection cn = new SqlConnection(connectionString);
