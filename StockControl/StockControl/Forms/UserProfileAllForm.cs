@@ -82,9 +82,13 @@ namespace StockControl.Forms
 
         private void pbxEdit_Click(object sender, EventArgs e)
         {
-            UserProfileForm userProfileDetails = new UserProfileForm();
-            userProfileDetails.Show();
-            this.Hide();
+
+            int idUser = Int32.Parse(dgvUserProfile.SelectedRows[0].Cells[0].Value.ToString());
+
+            UserProfileForm userProfileDetailsForm = new UserProfileForm(idUser);
+            userProfileDetailsForm.Show();
+
+            this.Close();
         }
 
         private void pbxSearch_Click(object sender, EventArgs e)

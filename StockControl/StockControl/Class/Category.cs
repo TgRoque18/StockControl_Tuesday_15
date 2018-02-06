@@ -68,6 +68,8 @@ namespace StockControl.Class
 
         }
 
+        public Category() { }
+
 
     }
 }
