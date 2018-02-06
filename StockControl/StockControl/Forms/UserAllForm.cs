@@ -14,6 +14,10 @@ namespace StockControl.Forms
     public partial class UserAllForm : Form
     {
         string connectionString = "workstation id=StockControl.mssql.somee.com;packet size = 4096; user id = luacademy_SQLLogin_1; pwd=msctq6gvt3;data source = StockControl.mssql.somee.com; persist security info=False;initial catalog = StockControl";
+        string name;
+        string password;
+        string eMail;
+        string profile;
 
         public UserAllForm()
         {
@@ -25,7 +29,7 @@ namespace StockControl.Forms
 
         private void pbxAdd_Click(object sender, EventArgs e)
         {
-            UserForm userForm = new UserForm();
+            UserDetailsForm userForm = new UserDetailsForm();
             userForm.Show();
             this.Hide();
         }
@@ -79,6 +83,16 @@ namespace StockControl.Forms
                 col.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
                 col.HeaderCell.Style.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Pixel);
             }
+        }
+
+        private void pbxEdit_Click(object sender, EventArgs e)
+        {
+            int idUser = Int32.Parse(dgvUser.SelectedRows[0].Cells[0].Value.ToString());
+
+            UserDetailsForm userDetails = new UserDetailsForm (idUser);
+            userDetails.Show();
+
+            this.Close();
         }
     }
 }

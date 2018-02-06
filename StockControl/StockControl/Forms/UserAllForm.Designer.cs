@@ -65,6 +65,7 @@
             this.pbxEdit.TabIndex = 14;
             this.pbxEdit.TabStop = false;
             this.pbxEdit.UseWaitCursor = true;
+            this.pbxEdit.Click += new System.EventHandler(this.pbxEdit_Click);
             // 
             // pbxAdd
             // 

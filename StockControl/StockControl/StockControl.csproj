@@ -127,11 +127,11 @@
     <Compile Include="Forms\UserAllForm.Designer.cs">
       <DependentUpon>UserAllForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\UserForm.cs">
+    <Compile Include="Forms\UserDetailsForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\UserForm.Designer.cs">
-      <DependentUpon>UserForm.cs</DependentUpon>
+    <Compile Include="Forms\UserDetailsForm.Designer.cs">
+      <DependentUpon>UserDetailsForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\UserProfileAllForm.cs">
       <SubType>Form</SubType>
@@ -181,8 +181,8 @@
     <EmbeddedResource Include="Forms\UserAllForm.resx">
       <DependentUpon>UserAllForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\UserForm.resx">
-      <DependentUpon>UserForm.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\UserDetailsForm.resx">
+      <DependentUpon>UserDetailsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\UserProfileAllForm.resx">
       <DependentUpon>UserProfileAllForm.cs</DependentUpon>

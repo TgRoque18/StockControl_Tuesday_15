@@ -1,6 +1,6 @@
 ﻿namespace StockControl.Forms
 {
-    partial class UserForm
+    partial class UserDetailsForm
     {
         /// <summary>
         /// Required designer variable.
@@ -48,6 +48,7 @@
             this.tbxFileName = new System.Windows.Forms.TextBox();
             this.pbxAddProfilePicture = new System.Windows.Forms.PictureBox();
             this.cmbUserProfile = new System.Windows.Forms.ComboBox();
+            this.lblId = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbxSave)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxDelete)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxBack)).BeginInit();
@@ -236,11 +237,21 @@
             this.cmbUserProfile.Size = new System.Drawing.Size(102, 21);
             this.cmbUserProfile.TabIndex = 24;
             // 
-            // UserForm
+            // lblId
+            // 
+            this.lblId.AutoSize = true;
+            this.lblId.Location = new System.Drawing.Point(12, 13);
+            this.lblId.Name = "lblId";
+            this.lblId.Size = new System.Drawing.Size(0, 13);
+            this.lblId.TabIndex = 25;
+            this.lblId.Visible = false;
+            // 
+            // UserDetailsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 261);
+            this.Controls.Add(this.lblId);
             this.Controls.Add(this.cmbUserProfile);
             this.Controls.Add(this.pbxAddProfilePicture);
             this.Controls.Add(this.tbxFileName);
@@ -260,7 +271,7 @@
             this.Controls.Add(this.lblPassword);
             this.Controls.Add(this.lblEmail);
             this.Controls.Add(this.lblName);
-            this.Name = "UserForm";
+            this.Name = "UserDetailsForm";
             this.Text = "UserForm";
             ((System.ComponentModel.ISupportInitialize)(this.pbxSave)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxDelete)).EndInit();
@@ -294,5 +305,6 @@
         private System.Windows.Forms.TextBox tbxFileName;
         private System.Windows.Forms.PictureBox pbxAddProfilePicture;
         private System.Windows.Forms.ComboBox cmbUserProfile;
+        private System.Windows.Forms.Label lblId;
     }
 }

@@ -62,5 +62,9 @@ namespace StockControl.Class
             this.Active = active;
             this.Name = name;
         }
+        public UserProfile()
+        {
+
+        }
     }
 }
