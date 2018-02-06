@@ -9,8 +9,8 @@ namespace StockControl.Class
     public class Product
     {
         int id = 0;
-        char name;
-        int price = 0;
+        string name;
+        float price = 0;
         Category category;
         bool active;
 
@@ -27,7 +27,7 @@ namespace StockControl.Class
             }
         }
 
-        public char Name
+        public string Name
         {
             get
             {
@@ -40,7 +40,7 @@ namespace StockControl.Class
             }
         }
 
-        public int Price
+        public float Price
         {
             get
             {
