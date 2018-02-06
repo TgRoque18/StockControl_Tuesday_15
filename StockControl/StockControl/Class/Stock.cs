@@ -95,5 +95,8 @@ namespace StockControl.Class
             this.Product = product;
             this.Name = name;
         }
+        public Stock()
+        {
+        }
     }
 }

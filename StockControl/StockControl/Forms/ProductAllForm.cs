@@ -69,6 +69,35 @@ namespace StockControl.Forms
                 col.HeaderCell.Style.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Pixel);
             }
         }
+
+        private void pbxBack_Click(object sender, EventArgs e)
+        {
+            HomeDetailsForm homeForm = new HomeDetailsForm();
+
+            homeForm.Show();
+            this.Hide();
+        }
+
+        private void pbxAdd_Click(object sender, EventArgs e)
+        {
+            ProductDetailsForm productdetails = new ProductDetailsForm();
+
+            productdetails.Show();
+            this.Hide();
+        }
+
+        private void pbxEdit_Click(object sender, EventArgs e)
+        {
+            ProductAllForm productall = new ProductAllForm();
+
+            productall.Show();
+            this.Hide();
+        }
+
+        private void pbxDelete_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 
   

@@ -85,10 +85,13 @@ namespace StockControl.Forms
 
         private void pbxEdit_Click(object sender, EventArgs e)
         {
-            StockDetailsForm stockForm = new StockDetailsForm();
+            int idUser = Int32.Parse(dgvStock.SelectedRows[0].Cells[0].Value.ToString());
 
-            stockForm.Show();
-            this.Hide();
+            StockDetailsForm stockDetailsForm = new StockDetailsForm(idUser);
+            stockDetailsForm.Show();
+
+            this.Close();
         }
+
     }
 }

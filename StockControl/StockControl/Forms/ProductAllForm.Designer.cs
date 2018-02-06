@@ -57,7 +57,6 @@
             this.dgvProduct.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvProduct.Size = new System.Drawing.Size(260, 150);
             this.dgvProduct.TabIndex = 32;
-            
             // 
             // tbxSearch
             // 
@@ -95,6 +94,7 @@
             this.pbxAdd.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbxAdd.TabIndex = 28;
             this.pbxAdd.TabStop = false;
+            this.pbxAdd.Click += new System.EventHandler(this.pbxAdd_Click);
             // 
             // pbxEdit
             // 
@@ -105,6 +105,7 @@
             this.pbxEdit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbxEdit.TabIndex = 27;
             this.pbxEdit.TabStop = false;
+            this.pbxEdit.Click += new System.EventHandler(this.pbxEdit_Click);
             // 
             // pbxDelete
             // 
@@ -115,6 +116,7 @@
             this.pbxDelete.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbxDelete.TabIndex = 26;
             this.pbxDelete.TabStop = false;
+            this.pbxDelete.Click += new System.EventHandler(this.pbxDelete_Click);
             // 
             // pbxBack
             // 
@@ -125,6 +127,7 @@
             this.pbxBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbxBack.TabIndex = 25;
             this.pbxBack.TabStop = false;
+            this.pbxBack.Click += new System.EventHandler(this.pbxBack_Click);
             // 
             // ProductAllForm
             // 
