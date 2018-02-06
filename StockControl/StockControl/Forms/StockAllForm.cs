@@ -90,5 +90,6 @@ namespace StockControl.Forms
             stockForm.Show();
             this.Hide();
         }
+
     }
 }
