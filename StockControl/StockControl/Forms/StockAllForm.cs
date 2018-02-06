@@ -92,5 +92,6 @@ namespace StockControl.Forms
 
             this.Close();
         }
+
     }
 }
