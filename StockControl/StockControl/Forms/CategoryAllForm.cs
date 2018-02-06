@@ -89,5 +89,15 @@ namespace StockControl.Forms
         {
 
         }
+
+        private void pbxEdit_Click(object sender, EventArgs e)
+        {
+            int idUser = Int32.Parse(dgvCategory.SelectedRows[0].Cells[0].Value.ToString());
+
+            CategoryDetailsForm categoryDetailsForm = new CategoryDetailsForm(idUser);
+            categoryDetailsForm.Show();
+
+            this.Close();
+        }
     }
 }
