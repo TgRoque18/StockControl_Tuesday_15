@@ -44,7 +44,7 @@ namespace StockControl.Forms
             {
                 sqlConnect.Open();
 
-                SqlCommand cmd = new SqlCommand("SELECT * FROM USER", sqlConnect);
+                SqlCommand cmd = new SqlCommand("SELECT * FROM [USER]", sqlConnect);
                 // SqlDataReader reader = cmd.ExecuteReader();
 
                 cmd.ExecuteNonQuery();
@@ -68,11 +68,11 @@ namespace StockControl.Forms
 
         private void ResizeDataGridView()
         {
-                                                                                                dgvUser.Columns["ID"].Visible = false;
+            dgvUser.Columns["ID"].Visible = false;
             dgvUser.Columns["NAME"].HeaderText = "Nome";
+            dgvUser.Columns["EMAIL"].HeaderText = "E-mail";
             dgvUser.Columns["ACTIVE"].HeaderText = "Ativo";
-            dgvUser.Columns["PASSWORS"].HeaderText = "Senha";
-            dgvUser.Columns["FK_PRODUCT"].Visible = false;
+            dgvUser.Columns["PASSWORD"].Visible = false;
 
             foreach (DataGridViewColumn col in dgvUser.Columns)
             {
