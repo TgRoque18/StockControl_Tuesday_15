@@ -136,6 +136,7 @@ namespace StockControl.Forms
             {
                 //Fechar
                 sqlConnect.Close();
+                CleanData();
             }
         }
 
