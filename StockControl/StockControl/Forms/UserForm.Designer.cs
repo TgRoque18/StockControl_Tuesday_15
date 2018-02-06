@@ -38,7 +38,6 @@
             this.tbxEmail = new System.Windows.Forms.TextBox();
             this.tbxPassword = new System.Windows.Forms.TextBox();
             this.tbxConfirmPassword = new System.Windows.Forms.TextBox();
-            this.tbxProfile = new System.Windows.Forms.TextBox();
             this.cbxActive = new System.Windows.Forms.CheckBox();
             this.pbxSave = new System.Windows.Forms.PictureBox();
             this.pbxDelete = new System.Windows.Forms.PictureBox();
@@ -48,6 +47,7 @@
             this.ofdSearchProfilePicture = new System.Windows.Forms.OpenFileDialog();
             this.tbxFileName = new System.Windows.Forms.TextBox();
             this.pbxAddProfilePicture = new System.Windows.Forms.PictureBox();
+            this.cmbUserProfile = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbxSave)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxDelete)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxBack)).BeginInit();
@@ -143,13 +143,6 @@
             this.tbxConfirmPassword.Size = new System.Drawing.Size(100, 20);
             this.tbxConfirmPassword.TabIndex = 9;
             // 
-            // tbxProfile
-            // 
-            this.tbxProfile.Location = new System.Drawing.Point(77, 167);
-            this.tbxProfile.Name = "tbxProfile";
-            this.tbxProfile.Size = new System.Drawing.Size(100, 20);
-            this.tbxProfile.TabIndex = 10;
-            // 
             // cbxActive
             // 
             this.cbxActive.AutoSize = true;
@@ -235,11 +228,20 @@
             this.pbxAddProfilePicture.TabStop = false;
             this.pbxAddProfilePicture.Click += new System.EventHandler(this.pbxAddImage_Click);
             // 
+            // cmbUserProfile
+            // 
+            this.cmbUserProfile.FormattingEnabled = true;
+            this.cmbUserProfile.Location = new System.Drawing.Point(77, 170);
+            this.cmbUserProfile.Name = "cmbUserProfile";
+            this.cmbUserProfile.Size = new System.Drawing.Size(102, 21);
+            this.cmbUserProfile.TabIndex = 24;
+            // 
             // UserForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 261);
+            this.Controls.Add(this.cmbUserProfile);
             this.Controls.Add(this.pbxAddProfilePicture);
             this.Controls.Add(this.tbxFileName);
             this.Controls.Add(this.lblTitle);
@@ -248,7 +250,6 @@
             this.Controls.Add(this.pbxDelete);
             this.Controls.Add(this.pbxBack);
             this.Controls.Add(this.cbxActive);
-            this.Controls.Add(this.tbxProfile);
             this.Controls.Add(this.tbxConfirmPassword);
             this.Controls.Add(this.tbxPassword);
             this.Controls.Add(this.tbxEmail);
@@ -283,7 +284,6 @@
         private System.Windows.Forms.TextBox tbxEmail;
         private System.Windows.Forms.TextBox tbxPassword;
         private System.Windows.Forms.TextBox tbxConfirmPassword;
-        private System.Windows.Forms.TextBox tbxProfile;
         private System.Windows.Forms.CheckBox cbxActive;
         private System.Windows.Forms.PictureBox pbxSave;
         private System.Windows.Forms.PictureBox pbxDelete;
@@ -293,5 +293,6 @@
         private System.Windows.Forms.OpenFileDialog ofdSearchProfilePicture;
         private System.Windows.Forms.TextBox tbxFileName;
         private System.Windows.Forms.PictureBox pbxAddProfilePicture;
+        private System.Windows.Forms.ComboBox cmbUserProfile;
     }
 }
