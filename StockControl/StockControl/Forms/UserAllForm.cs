@@ -1,4 +1,5 @@
-﻿using System;
+﻿using StockControl.Class;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -93,6 +94,17 @@ namespace StockControl.Forms
             userDetails.Show();
 
             this.Close();
+        }
+
+        private void pbxSearch_Click(object sender, EventArgs e)
+        {
+            string optionForm = "UserForm";
+            string optionString = "name";
+
+            Search search = new Search();
+            dgvUser.DataSource = search.SearchFilter(connectionString, tbxSearch.Text, optionString, optionForm);
+
+            tbxSearch.Text = "";
         }
     }
 }
