@@ -30,6 +30,7 @@ namespace StockControl.Forms
             cmbCategory.DisplayMember = "NAME";
         }
 
+
         public ProductDetailsForm(int idProduct)
         {
             InitializeComponent();
@@ -78,10 +79,10 @@ namespace StockControl.Forms
 
                     tbxName.Text = product.Name;
                     cbxActivation.Checked = product.Active;
-                    
+                    tbxPrice.Text = (product.Price).ToString();
 
                     //Busca o index baseado no Select
-                    int indexCombo = 0;
+                   // int indexCombo = 0;
                     //if (user.UserProfile != null)
                     //{
                     //    indexCombo = user.UserProfile.Id;
@@ -147,46 +148,86 @@ namespace StockControl.Forms
 
         private void pbxSave_Click(object sender, EventArgs e)
         {
-            GetData();
-            SqlConnection sqlConnect = new SqlConnection(connectionString);
-
-            try
+            if (string.IsNullOrEmpty(lblId.Text)) //-----
             {
-                //Conectar
-                sqlConnect.Open();
-                string sql = "INSERT INTO PRODUCT(NAME, PRICE, ACTIVE, FK_CATEGORY) VALUES (@name, @price, @active, @category)";
-                //string sql = "INSERT INTO CATEGORY(NAME, ACTIVE) VALUES (" 
-                //    + this.tbxName.Text + "," + this.cbxActive.Checked + ")";
+                GetData();
+                SqlConnection sqlConnect = new SqlConnection(connectionString);
 
-                SqlCommand cmd = new SqlCommand(sql, sqlConnect);
+                try
+                {
+                    //Conectar
+                    sqlConnect.Open();
+                    string sql = "INSERT INTO PRODUCT(NAME, PRICE, ACTIVE, FK_CATEGORY) VALUES (@name, @price, @active, @category)";
+                    //string sql = "INSERT INTO CATEGORY(NAME, ACTIVE) VALUES (" 
+                    //    + this.tbxName.Text + "," + this.cbxActive.Checked + ")";
 
-                cmd.Parameters.Add(new SqlParameter("@name", name));
-                cmd.Parameters.Add(new SqlParameter("@price", price));
-                cmd.Parameters.Add(new SqlParameter("@category", ((Category)cmbCategory.SelectedItem).Id));
+                    SqlCommand cmd = new SqlCommand(sql, sqlConnect);
 
-                cmd.Parameters.Add(new SqlParameter("@active", active));
+                    cmd.Parameters.Add(new SqlParameter("@name", name));
+                    cmd.Parameters.Add(new SqlParameter("@price", price));
+                    cmd.Parameters.Add(new SqlParameter("@category", ((Category)cmbCategory.SelectedItem).Id));
+
+                    cmd.Parameters.Add(new SqlParameter("@active", active));
 
 
-                cmd.ExecuteNonQuery();
+                    cmd.ExecuteNonQuery();
 
-                MessageBox.Show("Adicionado com sucesso!");
+                    MessageBox.Show("Adicionado com sucesso!");
 
+                    CleanData();
+
+                }
+                catch (Exception ex)
+                {
+                    //Tratar exceções
+                    MessageBox.Show("Erro ao adicionar produto!" + ex.Message);
+                    CleanData();
+                }
+                finally
+                {
+                    //Fechar
+                    sqlConnect.Close();
+
+                }
                 CleanData();
-
             }
-            catch (Exception ex)
+            else
             {
-                //Tratar exceções
-                MessageBox.Show("Erro ao adicionar produto!" + ex.Message);
-                CleanData();
-            }
-            finally
-            {
-                //Fechar
-                sqlConnect.Close();
+                SqlConnection sqlConnect = new SqlConnection(connectionString);
 
-            }
-            CleanData();
+                try
+                {
+                    sqlConnect.Open();
+                    string sql = "UPDATE PRODUCT SET NAME = @name, PRICE = @price, ACTIVE = @active Where ID = @id";
+
+                    SqlCommand cmd = new SqlCommand(sql, sqlConnect);
+
+                    cmd.Parameters.Add(new SqlParameter("@name", this.tbxName.Text));
+                    cmd.Parameters.Add(new SqlParameter("@active", this.cbxActivation.Checked));
+                    cmd.Parameters.Add(new SqlParameter("@price", this.tbxPrice.Text));
+                    cmd.Parameters.Add(new SqlParameter("@id", this.lblId.Text));
+
+                    //cmd.Parameters.Add(new SqlParameter("@fk", ((Category)cmbCategory.SelectedItem).Id));
+
+                    cmd.ExecuteNonQuery();
+
+                    MessageBox.Show("Alterações salvas com sucesso!");
+                    ProductAllForm productallform = new ProductAllForm();
+                    productallform.Show();
+                    this.Hide();
+                }
+                catch (Exception Ex)
+                {
+                    MessageBox.Show("Erro ao editar este produto!" + "\n\n" + Ex.Message);
+                    //throw;
+                
+                }
+                finally
+                {
+                    sqlConnect.Close();
+
+                }
+            }        
         }
 
 
@@ -208,7 +249,46 @@ namespace StockControl.Forms
 
         private void pbxDelete_Click(object sender, EventArgs e)
         {
+            if (!string.IsNullOrEmpty(lblId.Text)) //-----
+            {
+                SqlConnection sqlConnect = new SqlConnection(connectionString);
 
+                try
+                {
+                    //Conectar
+                    sqlConnect.Open();
+                    string sql = "DELETE FROM PRODUCT WHERE ID = @id";
+
+                    SqlCommand cmd = new SqlCommand(sql, sqlConnect);
+
+                    cmd.Parameters.Add(new SqlParameter("@id", this.lblId.Text));
+
+                    cmd.ExecuteNonQuery();
+
+                    MessageBox.Show("Removido com sucesso!");
+
+                    ProductAllForm productall = new ProductAllForm();
+                    productall.Show();
+                    this.Hide();
+
+                    //LogHelper log = new LogHelper();
+                    //log.Insert("User Remove");
+                }
+                catch (Exception ex)
+                {
+                    //Tratar exce��es
+                    MessageBox.Show("Erro ao remover categoria!" + ex.Message);
+                    //throw;
+
+                    //LogHelper logBD = new LogHelper();
+                    //logBD.PrintLog(Convert.ToString(ex));
+                }
+                finally
+                {
+                    //Fechar
+                    sqlConnect.Close();
+                }
+            }
         }
 
         private void ProductDetailsForm_Load(object sender, EventArgs e)

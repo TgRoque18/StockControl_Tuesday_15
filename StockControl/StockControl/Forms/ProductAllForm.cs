@@ -25,7 +25,7 @@ namespace StockControl.Forms
         }
 
 
-          private void ShowData()
+        private void ShowData()
         {
             SqlConnection sqlConnect = new SqlConnection(connectionString);
 
@@ -88,19 +88,52 @@ namespace StockControl.Forms
 
         private void pbxEdit_Click(object sender, EventArgs e)
         {
-            ProductAllForm productall = new ProductAllForm();
+            int idProduct = Int32.Parse(dgvProduct.SelectedRows[0].Cells[0].Value.ToString());
 
-            productall.Show();
-            this.Hide();
+            ProductDetailsForm productDetails = new ProductDetailsForm(idProduct);
+            productDetails.Show();
+
+            this.Close();
+
         }
 
         private void pbxDelete_Click(object sender, EventArgs e)
         {
+            int idProduct = Int32.Parse(dgvProduct.SelectedRows[0].Cells[0].Value.ToString());
 
+            SqlConnection sqlConnect = new SqlConnection(connectionString);
+
+            try
+            {
+                //Conectar
+                sqlConnect.Open();
+                string sql = "DELETE FROM PRODUCT WHERE ID = @id";
+
+                SqlCommand cmd = new SqlCommand(sql, sqlConnect);
+
+                cmd.Parameters.Add(new SqlParameter("@id", idProduct));
+
+                cmd.ExecuteNonQuery();
+
+                ShowData();
+
+                MessageBox.Show("Removido com sucesso!");
+            }
+            catch (Exception ex)
+            {
+                //Tratar exceções
+                MessageBox.Show("Erro ao remover usu�rio!" + "\n\n" + ex.Message);
+                throw;
+            }
+            finally
+            {
+                //Fechar
+                sqlConnect.Close();
+            }
         }
     }
 
-  
-       
-    }
+
+
+}
 
