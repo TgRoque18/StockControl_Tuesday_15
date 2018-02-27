@@ -93,5 +93,39 @@ namespace StockControl.Forms
             this.Close();
         }
 
+        private void pbxDelete_Click(object sender, EventArgs e)
+        {
+            int idStock = Int32.Parse(dgvStock.SelectedRows[0].Cells[0].Value.ToString());
+
+            SqlConnection sqlConnect = new SqlConnection(connectionString);
+
+            try
+            {
+                //Conectar
+                sqlConnect.Open();
+                string sql = "DELETE FROM STOCK WHERE ID = @id";
+
+                SqlCommand cmd = new SqlCommand(sql, sqlConnect);
+
+                cmd.Parameters.Add(new SqlParameter("@id", idStock));
+
+                cmd.ExecuteNonQuery();
+
+                MessageBox.Show("Removido com sucesso!");
+
+                ShowData();
+            }
+            catch (Exception ex)
+            {
+                //Tratar exce��es
+                MessageBox.Show("Erro ao remover estoque!" + "\n\n" + ex.Message);
+                throw;
+            }
+            finally
+            {
+                //Fechar
+                sqlConnect.Close();
+            }
+        }
     }
 }

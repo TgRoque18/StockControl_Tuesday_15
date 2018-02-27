@@ -82,7 +82,7 @@ namespace StockControl.Forms
 
                     //Inicializa o dropDown com as informa��es do banco
                     InitializeComboBox(cmbUserProfile, indexCombo);
-
+                    cmbUserProfile.DisplayMember = "NAME";
                 }
                 catch (Exception EX)
                 {
@@ -95,7 +95,7 @@ namespace StockControl.Forms
                     sqlConnect.Close();
                 }
             }
-            }
+        }
 
 
 
@@ -112,7 +112,7 @@ namespace StockControl.Forms
                 SqlDataReader reader = sqlCommand.ExecuteReader();
                 while (reader.Read())
                 {
-                    UserProfile up = new UserProfile(Int32.Parse(reader["ID"].ToString()), bool.Parse(reader["ACTIVE"].ToString()),reader["NAME"].ToString());
+                    UserProfile up = new UserProfile(Int32.Parse(reader["ID"].ToString()), bool.Parse(reader["ACTIVE"].ToString()), reader["NAME"].ToString());
                     //ers.Add(reader["ID"], reader["PRICE"],) // ??? not sure what to put here  as add is not available
                     userProfiles.Add(up);
                 }
@@ -216,8 +216,8 @@ namespace StockControl.Forms
                 try
                 {
                     sqlConnect.Open();
-                    string sql = "UPDATE [USER] SET NAME = @name, PASSWORD = @password, EMAIL = @email, ACTIVE = @active, FK_USER_PROFILE = @userProfile)";
-//Address = @add, City = @cit Where ID = @id and LastName = @add[USER](, PASSWORD, EMAIL, ACTIVE, FK_USER_PROFILE) VALUES (@name, @password, @email, @active, @userProfile)";
+                    string sql = "UPDATE [USER] SET NAME = @name, PASSWORD = @password, EMAIL = @email, ACTIVE = @active, FK_USER_PROFILE = @userProfile Where ID = @id";
+                    //Address = @add, City = @cit Where ID = @id and LastName = @add[USER](, PASSWORD, EMAIL, ACTIVE, FK_USER_PROFILE) VALUES (@name, @password, @email, @active, @userProfile)";
 
                     SqlCommand cmd = new SqlCommand(sql, sqlConnect);
                     cmd.Parameters.Add(new SqlParameter("@id", lblId.Text));
@@ -235,7 +235,7 @@ namespace StockControl.Forms
                      */
                     cmd.Parameters.Add(new SqlParameter("@userProfile", ((UserProfile)cmbUserProfile.SelectedItem).Id));
 
-                    
+
 
                     cmd.ExecuteNonQuery();
 
@@ -255,7 +255,7 @@ namespace StockControl.Forms
                     this.Hide();
                 }
             }
-           
+
         }
 
         private void CleanData()
@@ -290,23 +290,34 @@ namespace StockControl.Forms
                 sqlConnect.Open();
 
                 SqlCommand cmd = new SqlCommand("SELECT * FROM USER_PROFILE", sqlConnect);
-
+                bool act = false;
                 using (SqlDataReader reader = cmd.ExecuteReader()) //-----
                 {
                     while (reader.Read())
                     {
-                        cbxProfile.Items.Add(reader["NAME"].ToString());
-                    }
+
+                        if (Int32.Parse(reader["ID"].ToString()) == 0)
+                        {
+                            act = false;
+                        }
+                        else
+                        {
+                            act = true;
+                        }
+
+                        UserProfile up = new UserProfile(Int32.Parse(reader["ID"].ToString()), act, reader["NAME"].ToString());
+                        cbxProfile.Items.Add(up);
                 }
+            }
 
                 cbxProfile.SelectedItem = cbxProfile.Items[indexCombo];
-            }
+        }
             catch (Exception EX)
             {
                 //Tratar exceções
                 //throw;
 
-                MessageBox.Show("erro de acesso ao banco de dados");
+        MessageBox.Show("erro de acesso ao banco de dados");
 
                 //LogHelper logBD = new LogHelper();
                 //logBD.PrintLog(Convert.ToString(EX));
@@ -315,6 +326,49 @@ namespace StockControl.Forms
             {
                 //Fechar
                 sqlConnect.Close();
+            }
+        }
+
+        private void pbxDelete_Click(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(lblId.Text)) //-----
+            {
+                SqlConnection sqlConnect = new SqlConnection(connectionString);
+
+                try
+                {
+                    //Conectar
+                    sqlConnect.Open();
+                    string sql = "DELETE FROM [USER] WHERE ID = @id";
+
+                    SqlCommand cmd = new SqlCommand(sql, sqlConnect);
+
+                    cmd.Parameters.Add(new SqlParameter("@id", this.lblId.Text));
+
+                    cmd.ExecuteNonQuery();
+
+                    MessageBox.Show("Removido com sucesso!");
+
+                    //LogHelper log = new LogHelper();
+                    //log.Insert("User Remove");
+                }
+                catch (Exception ex)
+                {
+                    //Tratar exce��es
+                    MessageBox.Show("Erro ao remover categoria!" + ex.Message);
+                    //throw;
+
+                    //LogHelper logBD = new LogHelper();
+                    //logBD.PrintLog(Convert.ToString(ex));
+                }
+                finally
+                {
+                    //Fechar
+                    sqlConnect.Close();
+                    UserAllForm ua = new UserAllForm();
+                    ua.Show();
+                    this.Close();
+                }
             }
         }
     }
