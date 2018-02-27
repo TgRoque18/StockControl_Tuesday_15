@@ -101,6 +101,7 @@
             this.pbxSearch.TabIndex = 11;
             this.pbxSearch.TabStop = false;
             this.pbxSearch.UseWaitCursor = true;
+            this.pbxSearch.Click += new System.EventHandler(this.pbxSearch_Click);
             // 
             // tbxSearch
             // 
