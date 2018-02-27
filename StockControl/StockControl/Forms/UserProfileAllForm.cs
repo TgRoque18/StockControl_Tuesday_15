@@ -98,6 +98,37 @@ namespace StockControl.Forms
 
         private void pbxDelete_Click_1(object sender, EventArgs e)
         {
+            int idUser = Int32.Parse(dgvUserProfile.SelectedRows[0].Cells[0].Value.ToString());
+
+            SqlConnection sqlConnect = new SqlConnection(connectionString);
+
+            try
+            {
+                //Conectar
+                sqlConnect.Open();
+                string sql = "DELETE FROM USER_PROFILE WHERE ID = @id";
+
+                SqlCommand cmd = new SqlCommand(sql, sqlConnect);
+
+                cmd.Parameters.Add(new SqlParameter("@id", idUser));
+
+                cmd.ExecuteNonQuery();
+
+                ShowData();
+
+                MessageBox.Show("Removido com sucesso!");
+            }
+            catch (Exception ex)
+            {
+                //Tratar exce��es
+                MessageBox.Show("Erro ao remover perfil!" + "\n\n" + ex.Message);
+                
+            }
+            finally
+            {
+                //Fechar
+                sqlConnect.Close();
+            }
 
         }
 
