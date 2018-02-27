@@ -159,11 +159,11 @@ namespace StockControl.Forms
 
                     cmd.ExecuteNonQuery();
 
-                    MessageBox.Show("Altere��es salvas com sucesso!");
+                    MessageBox.Show("Alterações salvas com sucesso!");
                 }
                 catch (Exception Ex)
                 {
-                    MessageBox.Show("Erro ao editar esta categoria!" + "\n\n" + Ex.Message);
+                    MessageBox.Show("Erro ao editar esta estoque!" + "\n\n" + Ex.Message);
                     throw;
                 }
                 finally
@@ -186,10 +186,47 @@ namespace StockControl.Forms
 
         private void pbxDelete_Click(object sender, EventArgs e)
         {
-            StockAllForm stockallForm = new StockAllForm();
+            if (!string.IsNullOrEmpty(lblId.Text)) //-----
+            {
+                SqlConnection sqlConnect = new SqlConnection(connectionString);
 
-            stockallForm.Show();
-            this.Hide();
+                try
+                {
+                    //Conectar
+                    sqlConnect.Open();
+                    string sql = "DELETE FROM STOCK WHERE ID = @id";
+
+                    SqlCommand cmd = new SqlCommand(sql, sqlConnect);
+
+                    cmd.Parameters.Add(new SqlParameter("@id", this.lblId.Text));
+
+                    cmd.ExecuteNonQuery();
+
+                    MessageBox.Show("Removido com sucesso!");
+
+                    StockAllForm stockallForm = new StockAllForm();
+
+                    stockallForm.Show();
+                    this.Hide();
+
+                    //LogHelper log = new LogHelper();
+                    //log.Insert("User Remove");
+                }
+                catch (Exception ex)
+                {
+                    //Tratar exce��es
+                    MessageBox.Show("Erro ao remover estoque!" + ex.Message);
+                   //throw;
+
+                    //LogHelper logBD = new LogHelper();
+                    //logBD.PrintLog(Convert.ToString(ex));
+                }
+                finally
+                {
+                    //Fechar
+                    sqlConnect.Close();
+                }
+            }
         }
 
         void GetData()
