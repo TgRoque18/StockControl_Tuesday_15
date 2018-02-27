@@ -1,4 +1,5 @@
-﻿using System;
+﻿using StockControl.Class;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -130,6 +131,18 @@ namespace StockControl.Forms
                 //Fechar
                 sqlConnect.Close();
             }
+        }
+
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            string optionForm = "ProductForm";
+            string optionString = "name";
+
+            Search search = new Search();
+            dgvProduct.DataSource = search.SearchFilter(connectionString, tbxSearch.Text, optionString, optionForm);
+
+            tbxSearch.Text = "";
         }
     }
 

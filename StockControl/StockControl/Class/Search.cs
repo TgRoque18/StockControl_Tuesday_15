@@ -63,15 +63,15 @@ namespace StockControl.Class
                 switch (optionString)
                 {
                     case "name":
-                        optionString = "SELECT * FROM Product  WHERE NAME LIKE @value";
+                        optionString = "SELECT * FROM PRODUCT WHERE NAME LIKE @value";
                         break;
 
                     case "active":
-                        optionString = "SELECT * FROM Product WHERE ACTIVE LIKE @value";
+                        optionString = "SELECT * FROM PRODUCT WHERE ACTIVE LIKE @value";
                         break;
 
                     case "price":
-                        optionString = "SELECT * FROM Product WHERE PRICE LIKE @value";
+                        optionString = "SELECT * FROM PRODUCT WHERE PRICE LIKE @value";
                         break;
                 }
             }
