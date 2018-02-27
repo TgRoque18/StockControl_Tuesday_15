@@ -1,4 +1,5 @@
-﻿using System;
+﻿using StockControl.Class;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,6 +15,7 @@ namespace StockControl.Forms
     public partial class StockAllForm : Form
     {
         string connectionString = "workstation id=StockControl.mssql.somee.com;packet size = 4096; user id = luacademy_SQLLogin_1; pwd=msctq6gvt3;data source = StockControl.mssql.somee.com; persist security info=False;initial catalog = StockControl";
+        private object gridViewStock;
 
         public StockAllForm()
         {
@@ -127,5 +129,17 @@ namespace StockControl.Forms
                 sqlConnect.Close();
             }
         }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            string optionForm = "UserForm";
+            string optionString = "name";
+
+            Search search = new Search();
+            dgvStock.DataSource = search.SearchFilter(connectionString, tbxSearch.Text, optionString, optionForm);
+
+            tbxSearch.Text = "";
+        }
     }
+    
 }
