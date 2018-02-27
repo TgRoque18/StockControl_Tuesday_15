@@ -173,6 +173,7 @@
             this.pbxDelete.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbxDelete.TabIndex = 18;
             this.pbxDelete.TabStop = false;
+            this.pbxDelete.Click += new System.EventHandler(this.pbxDelete_Click);
             // 
             // pbxBack
             // 
