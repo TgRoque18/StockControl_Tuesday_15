@@ -113,6 +113,8 @@ namespace StockControl.Forms
 
                 cmd.ExecuteNonQuery();
 
+                Log.SalvarLog("Removido Estoque", DateTime.Now);
+
                 MessageBox.Show("Removido com sucesso!");
 
                 ShowData();

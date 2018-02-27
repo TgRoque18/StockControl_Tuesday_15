@@ -42,7 +42,7 @@ namespace StockControl.Forms
             {
                 sqlConnect.Open();
 
-                SqlCommand cmd = new SqlCommand("SELECT * FROM LOG", sqlConnect);
+                SqlCommand cmd = new SqlCommand("SELECT * FROM LOG ORDER BY ID DESC", sqlConnect);
                 // SqlDataReader reader = cmd.ExecuteReader();
 
                 cmd.ExecuteNonQuery();
@@ -68,6 +68,7 @@ namespace StockControl.Forms
         {
             dgvLog.Columns["ID"].Visible = false;
             dgvLog.Columns["DESCRIPTION"].HeaderText = "Descrição";
+            dgvLog.Columns["DESCRIPTION"].Width = 150;
             dgvLog.Columns["DATE"].HeaderText = "Data";
             dgvLog.Columns["FK_LOG_TYPE"].Visible = false;
             

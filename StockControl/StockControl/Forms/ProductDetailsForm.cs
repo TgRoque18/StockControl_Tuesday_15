@@ -173,6 +173,7 @@ namespace StockControl.Forms
                     cmd.ExecuteNonQuery();
 
                     MessageBox.Show("Adicionado com sucesso!");
+                    Log.SalvarLog("Adicionado Produto", DateTime.Now);
 
                     CleanData();
 
@@ -212,6 +213,7 @@ namespace StockControl.Forms
                     cmd.ExecuteNonQuery();
 
                     MessageBox.Show("Alterações salvas com sucesso!");
+                    Log.SalvarLog("Alterado Produto", DateTime.Now);
                     ProductAllForm productallform = new ProductAllForm();
                     productallform.Show();
                     this.Hide();
@@ -266,6 +268,7 @@ namespace StockControl.Forms
                     cmd.ExecuteNonQuery();
 
                     MessageBox.Show("Removido com sucesso!");
+                    Log.SalvarLog("Removido Produto", DateTime.Now);
 
                     ProductAllForm productall = new ProductAllForm();
                     productall.Show();

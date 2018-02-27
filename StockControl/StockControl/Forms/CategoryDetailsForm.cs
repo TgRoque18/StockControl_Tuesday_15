@@ -111,7 +111,7 @@ namespace StockControl.Forms
                     cmd.ExecuteNonQuery();
 
                     MessageBox.Show("Adicionado com sucesso!");
-
+                    Log.SalvarLog("Adicionado Categoria", DateTime.Now);
                     CleanData();
 
                 }
@@ -148,6 +148,7 @@ namespace StockControl.Forms
                     cmd.ExecuteNonQuery();
 
                     MessageBox.Show("Altereções salvas com sucesso!");
+                    Log.SalvarLog("Alterado Categoria", DateTime.Now);
                 }
                 catch (Exception Ex)
                 {
@@ -202,6 +203,7 @@ namespace StockControl.Forms
                     cmd.ExecuteNonQuery();
 
                     MessageBox.Show("Removido com sucesso!");
+                    Log.SalvarLog("Removido Categoria", DateTime.Now);
 
                     CategoryAllForm categoryAllForm = new CategoryAllForm();
 

@@ -193,6 +193,8 @@ namespace StockControl.Forms
 
                     cmd.ExecuteNonQuery();
 
+                    Log.SalvarLog("Adicionado Usuário", DateTime.Now);
+
                     MessageBox.Show("Usuário adicionado com sucesso!");
 
                 }
@@ -238,6 +240,7 @@ namespace StockControl.Forms
 
 
                     cmd.ExecuteNonQuery();
+                    Log.SalvarLog("Alterado Usuário", DateTime.Now);
 
                     MessageBox.Show("Alterações salvas com sucesso!");
                 }
@@ -348,6 +351,7 @@ namespace StockControl.Forms
                     cmd.ExecuteNonQuery();
 
                     MessageBox.Show("Removido com sucesso!");
+                    Log.SalvarLog("Removido Usuário", DateTime.Now);
 
                     //LogHelper log = new LogHelper();
                     //log.Insert("User Remove");

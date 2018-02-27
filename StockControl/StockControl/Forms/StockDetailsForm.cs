@@ -119,6 +119,8 @@ namespace StockControl.Forms
 
                     cmd.ExecuteNonQuery();
 
+                    Log.SalvarLog("Adicionado Estoque", DateTime.Now);
+
                     MessageBox.Show("Adicionado com sucesso!");
 
                     CleanData();
@@ -160,6 +162,8 @@ namespace StockControl.Forms
                     cmd.ExecuteNonQuery();
 
                     MessageBox.Show("Alterações salvas com sucesso!");
+
+                    Log.SalvarLog("Alterado Estoque", DateTime.Now);
                 }
                 catch (Exception Ex)
                 {
@@ -203,6 +207,7 @@ namespace StockControl.Forms
                     cmd.ExecuteNonQuery();
 
                     MessageBox.Show("Removido com sucesso!");
+                    Log.SalvarLog("Removido Estoque", DateTime.Now);
 
                     StockAllForm stockallForm = new StockAllForm();
 

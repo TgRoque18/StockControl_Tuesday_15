@@ -120,8 +120,9 @@ namespace StockControl.Forms
                     cmd.ExecuteNonQuery();
 
                     MessageBox.Show("Removido com sucesso!");
+                Log.SalvarLog("Removido Categoria", DateTime.Now);
 
-                    ShowData();
+                ShowData();
 
                 }
                 catch (Exception ex)

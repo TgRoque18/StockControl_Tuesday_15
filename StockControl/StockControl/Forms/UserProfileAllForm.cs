@@ -1,4 +1,5 @@
-﻿using System;
+﻿using StockControl.Class;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -93,8 +94,15 @@ namespace StockControl.Forms
 
         private void pbxSearch_Click(object sender, EventArgs e)
         {
+            string optionForm = "UserProfileForm";
+            string optionString = "name";
 
-        }
+            Search search = new Search();
+            dgvUserProfile.DataSource = search.SearchFilter(connectionString, tbxSearch.Text, optionString, optionForm);
+
+            tbxSearch.Text = "";
+        
+    }
 
         private void pbxDelete_Click_1(object sender, EventArgs e)
         {
@@ -117,6 +125,7 @@ namespace StockControl.Forms
                 ShowData();
 
                 MessageBox.Show("Removido com sucesso!");
+                Log.SalvarLog("Removido perfil de usuário", DateTime.Now);
             }
             catch (Exception ex)
             {

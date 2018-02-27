@@ -144,6 +144,7 @@ namespace StockControl
                     cmd.ExecuteNonQuery();
 
                     MessageBox.Show("Alterações salvas com sucesso!");
+                    Log.SalvarLog("Alterado perfil de usuário", DateTime.Now);
                 }
                 catch (Exception Ex)
                 {
@@ -182,6 +183,7 @@ namespace StockControl
                     cmd.ExecuteNonQuery();
 
                     MessageBox.Show("Removido com sucesso!");
+                    Log.SalvarLog("Removido perfil de usuário", DateTime.Now);
 
                     UserProfileAllForm form = new UserProfileAllForm();
                     form.Show();

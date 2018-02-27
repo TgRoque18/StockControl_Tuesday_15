@@ -119,6 +119,8 @@ namespace StockControl.Forms
                 ShowData();
 
                 MessageBox.Show("Removido com sucesso!");
+
+                Log.SalvarLog("Removido Produto", DateTime.Now);
             }
             catch (Exception ex)
             {
